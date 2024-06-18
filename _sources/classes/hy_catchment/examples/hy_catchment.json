@@ -1,7 +1,9 @@
 {
   "type": "Feature",
+
   "featureType": "HY_Basin",
   "properties": {
+      "@type": "hyf:HY_Basin",
     "gnis_url": "https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133",
     "uri": "https://geoconnex.us/ref/hu02/03",
     "gnis_id": 2730133,
@@ -13,9 +15,9 @@
   },
   "id": "03",
   "geometry": {
-    "type": "MultiPolygon",
+    "type": "Polygon",
     "coordinates": [
-      [
+
         [
           -82.79192551924065,
           24.699718894664848
@@ -32,7 +34,7 @@
           -82.79192551924065,
           24.699718894664848
         ]
-      ]
+      
     ]
 
   },
