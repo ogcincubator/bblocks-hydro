@@ -6,3 +6,12 @@
   snippets:
     - language: json
       ref: examples/hy_catchment.json
+
+- title: Basin as node point.
+  comment:
+    Geometry is a point
+
+  snippets:
+    - language: json
+      ref: examples/hy_basin_point.json
+
