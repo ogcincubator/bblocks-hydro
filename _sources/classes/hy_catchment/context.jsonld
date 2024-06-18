@@ -1,18 +1,18 @@
 {
   "@context": {
     "@base": "https://geoconnex.us/ref/hu02/",
-    "hyf": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/",
+    "hyf": "https://www.opengis.net/def/schema/hy_features/hyf/",
     "prev": {
       "@type": "@id",
-      "@id": "hyf:upstreamBasin"
+      "@id": "hyf:upperCatchment"
     },
-    "upstreamBasin": {
+    "upperCatchment": {
       "@type": "@id",
-      "@id": "hyf:upstreamBasin"
+      "@id": "hyf:upperCatchment"
     },
-     "hyf:upstreamBasin": {
+     "hyf:upperCatchment": {
       "@type": "@id",
-      "@id": "hyf:upstreamBasin"
+      "@id": "hyf:upperCatchment"
     }
   }
 }
