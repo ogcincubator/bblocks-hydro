@@ -1,6 +1,9 @@
 ---
 title: HY_Basin (Schema)
 
+language_tabs:
+  - json: JSON
+  - jsonld: JSON-LD
 
 toc_footers:
   - Version 1.0
@@ -25,8 +28,8 @@ HY Feature example - HY_Basin
     <a href="http://www.opengis.net/def/status/under-development" target="_blank" data-rainbow-uri>Under development</a>
 </p>
 
-<aside class="success">
-This building block is <strong><a href="https://github.com/ogcincubator/bblocks-hydro/blob/master/build/tests/hydro/hy_catchment/" target="_blank">valid</a></strong>
+<aside class="warning">
+Validation for this building block has <strong><a href="https://github.com/ogcincubator/bblocks-hydro/blob/master/build/tests/hydro/hy_catchment/" target="_blank">failed</a></strong>
 </aside>
 
 # Description
@@ -118,6 +121,77 @@ The model schema is wrapped in a FG-JSON feature schema.
 
 
 
+
+```jsonld
+{
+  "type": "Feature",
+  "featureType": "HY_Basin",
+  "properties": {
+    "gnis_url": "https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133",
+    "uri": "https://geoconnex.us/ref/hu02/03",
+    "gnis_id": 2730133,
+    "name": "South Atlantic-Gulf Region",
+    "fid": 15,
+    "loaddate": "2018-07-17T15:44:28+00:00",
+    "prev": "02",
+    "next": "04"
+  },
+  "id": "03",
+  "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          -82.79192551924065,
+          24.699718894664848
+        ],
+        [
+          -82.75341358941488,
+          24.668448982060728
+        ],
+        [
+          -82.75066457497482,
+          24.65974178394976
+        ],
+        [
+          -82.79192551924065,
+          24.699718894664848
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "alternate",
+      "type": "text/html",
+      "title": "This document as HTML",
+      "href": "https://geoconnex.us/ref/hu02/03?f=html"
+    },
+    {
+      "rel": "collection",
+      "type": "application/json",
+      "title": "HU02",
+      "href": "https://reference.geoconnex.us/collections/hu02"
+    },
+    {
+      "rel": "prev",
+      "type": "application/json",
+      "href": "https://reference.geoconnex.us/collections/hu02/items/02?f=json"
+    }
+  ],
+  "@context": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/context.jsonld"
+}
+```
+
+<blockquote class="lang-specific jsonld">
+  <p class="example-links">
+    <a target="_blank" href="https://ogcincubator.github.io/bblocks-hydro/build/tests/hydro/hy_catchment/example_1_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fogcincubator.github.io%2Fbblocks-hydro%2Fbuild%2Ftests%2Fhydro%2Fhy_catchment%2Fexample_1_1.jsonld">View on JSON-LD Playground</a>
+</blockquote>
+
+
+
+
 # JSON Schema
 
 ```yaml--schema
@@ -139,6 +213,8 @@ $defs:
                 type: string
                 format: uri
               uniqueItems: true
+              x-jsonld-type: '@id'
+              x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin
             code:
               type: string
             inflowNode:
@@ -647,6 +723,15 @@ $defs:
             outfall:
               type: string
               format: uri
+x-jsonld-extra-terms:
+  prev:
+    x-jsonld-type: '@id'
+    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin
+  hyf:upstreamBasin:
+    x-jsonld-type: '@id'
+    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin
+x-jsonld-prefixes:
+  hyf: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/
 
 ```
 
@@ -661,13 +746,26 @@ Links to the schema:
 # JSON-LD Context
 
 ```json--ldContext
-None
+{
+  "@context": {
+    "prev": {
+      "@type": "@id",
+      "@id": "hyf:upstreamBasin"
+    },
+    "hyf:upstreamBasin": {
+      "@type": "@id",
+      "@id": "hyf:upstreamBasin"
+    },
+    "hyf": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/",
+    "@version": 1.1
+  }
+}
 ```
 
-> <a target="_blank" href="https://json-ld.org/playground/#json-ld=%2Fgithub%2Fworkspace%2F_sources%2Fhy_catchment%2Fcontext.jsonld">View on JSON-LD Playground</a>
+> <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fogcincubator.github.io%2Fbblocks-hydro%2Fbuild%2Fannotated%2Fhydro%2Fhy_catchment%2Fcontext.jsonld">View on JSON-LD Playground</a>
 
 You can find the full JSON-LD context here:
-<a href="/github/workspace/_sources/hy_catchment/context.jsonld" target="_blank">/github/workspace/_sources/hy_catchment/context.jsonld</a>
+<a href="https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/context.jsonld" target="_blank">https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/context.jsonld</a>
 
 # References
 

@@ -53,7 +53,9 @@
                     "type": "string",
                     "format": "uri"
                   },
-                  "uniqueItems": true
+                  "uniqueItems": true,
+                  "x-jsonld-type": "@id",
+                  "x-jsonld-id": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin"
                 },
                 "code": {
                   "type": "string"
@@ -841,6 +843,19 @@
         }
       ]
     }
+  },
+  "x-jsonld-extra-terms": {
+    "prev": {
+      "x-jsonld-type": "@id",
+      "x-jsonld-id": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin"
+    },
+    "hyf:upstreamBasin": {
+      "x-jsonld-type": "@id",
+      "x-jsonld-id": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin"
+    }
+  },
+  "x-jsonld-prefixes": {
+    "hyf": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/"
   },
   "x-schema-id": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature.json",
   "x-schema-version": "https://json-schema.org/draft/2019-09/schema"

@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "prev": {
+      "@type": "@id",
+      "@id": "hyf:upstreamBasin"
+    },
+    "hyf:upstreamBasin": {
+      "@type": "@id",
+      "@id": "hyf:upstreamBasin"
+    },
+    "hyf": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/",
+    "@version": 1.1
+  }
+}

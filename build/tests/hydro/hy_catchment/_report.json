@@ -2,8 +2,8 @@
   "title": "Validation report for ogc.hydro.hy_catchment - HY_Basin",
   "bblockName": "HY_Basin",
   "bblockId": "ogc.hydro.hy_catchment",
-  "generated": "2024-06-18T17:34:10.851709+00:00",
-  "result": true,
+  "generated": "2024-06-18T17:55:35.170852+00:00",
+  "result": false,
   "items": [
     {
       "source": {
@@ -15,7 +15,7 @@
         "snippetIndex": 1,
         "language": "json"
       },
-      "result": true,
+      "result": false,
       "sections": [
         {
           "name": "GENERAL",
@@ -29,6 +29,25 @@
             {
               "isError": false,
               "message": "Using example_1_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_1_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_1_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": true,
+              "filename": "example_1_1.ttl",
+              "size": 0,
+              "isError": true,
+              "message": "**Empty** output Turtle example_1_1.ttl created"
             }
           ]
         },
@@ -70,7 +89,7 @@
   "globalErrors": {},
   "counts": {
     "total": 1,
-    "passed": 1,
-    "failed": 0
+    "passed": 0,
+    "failed": 1
   }
 }
