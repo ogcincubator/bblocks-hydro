@@ -10,7 +10,7 @@ x-defs:
             properties:
               type: object
               properties:
-                upstreamBasin:
+                upperCatchment:
                   type: array
                   items:
                     type: string
@@ -1047,13 +1047,13 @@ allOf:
 x-jsonld-extra-terms:
   prev:
     x-jsonld-type: '@id'
-    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin
-  upstreamBasin:
+    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/upperCatchment
+  upperCatchment:
     x-jsonld-type: '@id'
-    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin
-  hyf:upstreamBasin:
+    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/upperCatchment
+  hyf:upperCatchment:
     x-jsonld-type: '@id'
-    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin
+    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/upperCatchment
 x-jsonld-prefixes:
-  hyf: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/
+  hyf: https://www.opengis.net/def/schema/hy_features/hyf/
 x-schema-version: https://json-schema.org/draft/2020-12/schema

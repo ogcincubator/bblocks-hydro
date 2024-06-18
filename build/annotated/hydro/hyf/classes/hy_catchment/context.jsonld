@@ -51,17 +51,17 @@
     },
     "prev": {
       "@type": "@id",
-      "@id": "hyf:upstreamBasin"
+      "@id": "hyf:upperCatchment"
     },
-    "upstreamBasin": {
+    "upperCatchment": {
       "@type": "@id",
-      "@id": "hyf:upstreamBasin"
+      "@id": "hyf:upperCatchment"
     },
-    "hyf:upstreamBasin": {
+    "hyf:upperCatchment": {
       "@type": "@id",
-      "@id": "hyf:upstreamBasin"
+      "@id": "hyf:upperCatchment"
     },
-    "hyf": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/",
+    "hyf": "https://www.opengis.net/def/schema/hy_features/hyf/",
     "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",

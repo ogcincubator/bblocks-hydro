@@ -44,7 +44,7 @@ $defs:
         properties:
           type: object
           properties:
-            upstreamBasin:
+            upperCatchment:
               type: array
               items:
                 type: string

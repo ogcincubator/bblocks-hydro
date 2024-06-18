@@ -155,7 +155,7 @@ The model schema is wrapped in a FG-JSON feature schema.
 ```ttl
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix hyf: <https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/> .
+@prefix hyf: <https://www.opengis.net/def/schema/hy_features/hyf/> .
 @prefix ns1: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -167,17 +167,17 @@ The model schema is wrapped in a FG-JSON feature schema.
     rdfs:seeAlso [ dcterms:type "application/json" ;
             ns1:relation <http://www.iana.org/assignments/relation/prev> ;
             oa:hasTarget <https://reference.geoconnex.us/collections/hu02/items/02?f=json> ],
-        [ rdfs:label "HU02" ;
-            dcterms:type "application/json" ;
-            ns1:relation <http://www.iana.org/assignments/relation/collection> ;
-            oa:hasTarget <https://reference.geoconnex.us/collections/hu02> ],
         [ rdfs:label "This document as HTML" ;
             dcterms:type "text/html" ;
             ns1:relation <http://www.iana.org/assignments/relation/alternate> ;
-            oa:hasTarget <https://geoconnex.us/ref/hu02/03?f=html> ] ;
+            oa:hasTarget <https://geoconnex.us/ref/hu02/03?f=html> ],
+        [ rdfs:label "HU02" ;
+            dcterms:type "application/json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/collection> ;
+            oa:hasTarget <https://reference.geoconnex.us/collections/hu02> ] ;
     geojson:geometry [ a geojson:MultiPolygon ;
             geojson:coordinates ( ( ( -8.279193e+01 2.469972e+01 ) ( -8.275341e+01 2.466845e+01 ) ( -8.275066e+01 2.465974e+01 ) ( -8.279193e+01 2.469972e+01 ) ) ) ] ;
-    hyf:upstreamBasin <http://example.com/features/02> .
+    hyf:upperCatchment <http://example.com/features/02> .
 
 
 ```
@@ -287,7 +287,7 @@ The model schema is wrapped in a FG-JSON feature schema.
 ```ttl
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix geojson: <https://purl.org/geojson/vocab#> .
-@prefix hyf: <https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/> .
+@prefix hyf: <https://www.opengis.net/def/schema/hy_features/hyf/> .
 @prefix ns1: <http://www.iana.org/assignments/> .
 @prefix oa: <http://www.w3.org/ns/oa#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -296,20 +296,20 @@ The model schema is wrapped in a FG-JSON feature schema.
 
 <file:///github/workspace/03> a geojson:Feature,
         hyf:HY_Basin ;
-    rdfs:seeAlso [ dct:type "application/json" ;
-            ns1:relation <http://www.iana.org/assignments/relation/prev> ;
-            oa:hasTarget <https://reference.geoconnex.us/collections/hu02/items/02?f=json> ],
-        [ rdfs:label "This document as HTML" ;
+    rdfs:seeAlso [ rdfs:label "This document as HTML" ;
             dct:type "text/html" ;
             ns1:relation <http://www.iana.org/assignments/relation/alternate> ;
             oa:hasTarget <https://geoconnex.us/ref/hu02/03?f=html> ],
+        [ dct:type "application/json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/prev> ;
+            oa:hasTarget <https://reference.geoconnex.us/collections/hu02/items/02?f=json> ],
         [ rdfs:label "HU02" ;
             dct:type "application/json" ;
             ns1:relation <http://www.iana.org/assignments/relation/collection> ;
             oa:hasTarget <https://reference.geoconnex.us/collections/hu02> ] ;
     geojson:geometry [ a geojson:Point ;
             geojson:coordinates ( -8.279193e+01 2.469972e+01 ) ] ;
-    hyf:upstreamBasin <file:///github/workspace/02> .
+    hyf:upperCatchment <file:///github/workspace/02> .
 
 
 ```
@@ -325,15 +325,15 @@ allOf:
 x-jsonld-extra-terms:
   prev:
     x-jsonld-type: '@id'
-    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin
-  upstreamBasin:
+    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/upperCatchment
+  upperCatchment:
     x-jsonld-type: '@id'
-    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin
-  hyf:upstreamBasin:
+    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/upperCatchment
+  hyf:upperCatchment:
     x-jsonld-type: '@id'
-    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin
+    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/upperCatchment
 x-jsonld-prefixes:
-  hyf: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/
+  hyf: https://www.opengis.net/def/schema/hy_features/hyf/
 
 ```
 
@@ -399,17 +399,17 @@ Links to the schema:
     },
     "prev": {
       "@type": "@id",
-      "@id": "hyf:upstreamBasin"
+      "@id": "hyf:upperCatchment"
     },
-    "upstreamBasin": {
+    "upperCatchment": {
       "@type": "@id",
-      "@id": "hyf:upstreamBasin"
+      "@id": "hyf:upperCatchment"
     },
-    "hyf:upstreamBasin": {
+    "hyf:upperCatchment": {
       "@type": "@id",
-      "@id": "hyf:upstreamBasin"
+      "@id": "hyf:upperCatchment"
     },
-    "hyf": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/",
+    "hyf": "https://www.opengis.net/def/schema/hy_features/hyf/",
     "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",

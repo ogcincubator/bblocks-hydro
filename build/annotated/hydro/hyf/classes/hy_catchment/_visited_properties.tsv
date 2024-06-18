@@ -10,7 +10,7 @@ path	@id
 /properties/context/spatialContext	
 /properties/context/temporalContext	
 /properties/containingCatchment	
-/properties/upstreamBasin	
+/properties/upperCatchment	
 /properties/code	
 /properties/inflowNode	
 /properties/outflowNode	

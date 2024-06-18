@@ -12,18 +12,18 @@
   "x-jsonld-extra-terms": {
     "prev": {
       "x-jsonld-type": "@id",
-      "x-jsonld-id": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin"
+      "x-jsonld-id": "https://www.opengis.net/def/schema/hy_features/hyf/upperCatchment"
     },
-    "upstreamBasin": {
+    "upperCatchment": {
       "x-jsonld-type": "@id",
-      "x-jsonld-id": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin"
+      "x-jsonld-id": "https://www.opengis.net/def/schema/hy_features/hyf/upperCatchment"
     },
-    "hyf:upstreamBasin": {
+    "hyf:upperCatchment": {
       "x-jsonld-type": "@id",
-      "x-jsonld-id": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin"
+      "x-jsonld-id": "https://www.opengis.net/def/schema/hy_features/hyf/upperCatchment"
     }
   },
   "x-jsonld-prefixes": {
-    "hyf": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/"
+    "hyf": "https://www.opengis.net/def/schema/hy_features/hyf/"
   }
 }

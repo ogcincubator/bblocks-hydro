@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hydro.hyf.classes.hy_catchment - HY_Basin",
   "bblockName": "HY_Basin",
   "bblockId": "ogc.hydro.hyf.classes.hy_catchment",
-  "generated": "2024-06-18T18:48:42.841085+00:00",
+  "generated": "2024-06-18T19:02:48.988934+00:00",
   "result": false,
   "items": [
     {
@@ -61,7 +61,7 @@
               "exception": "ValidationError",
               "errorMessage": "'outflowNode' is a required property",
               "isError": true,
-              "message": "ValidationError: 'outflowNode' is a required property\n\nFailed validating 'required' in schema['allOf'][0]['allOf'][1]['properties']['properties']:\n    {'properties': {'code': {'type': 'string'},\n                    'inflowNode': {'format': 'uri', 'type': 'string'},\n                    'outflowNode': {'format': 'uri', 'type': 'string'},\n                    'upstreamBasin': {'items': {'format': 'uri',\n                                                'type': 'string'},\n                                      'type': 'array',\n                                      'uniqueItems': True}},\n     'required': ['outflowNode'],\n     'type': 'object'}\n\nOn instance['properties']:\n    {'@type': 'hyf:HY_Basin',\n     'fid': 15,\n     'gnis_id': 2730133,\n     'gnis_url': 'https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133',\n     'loaddate': '2018-07-17T15:44:28+00:00',\n     'name': 'South Atlantic-Gulf Region',\n     'next': '04',\n     'prev': '02',\n     'uri': 'https://geoconnex.us/ref/hu02/03'}"
+              "message": "ValidationError: 'outflowNode' is a required property\n\nFailed validating 'required' in schema['allOf'][0]['allOf'][1]['properties']['properties']:\n    {'properties': {'code': {'type': 'string'},\n                    'inflowNode': {'format': 'uri', 'type': 'string'},\n                    'outflowNode': {'format': 'uri', 'type': 'string'},\n                    'upperCatchment': {'items': {'format': 'uri',\n                                                 'type': 'string'},\n                                       'type': 'array',\n                                       'uniqueItems': True}},\n     'required': ['outflowNode'],\n     'type': 'object'}\n\nOn instance['properties']:\n    {'@type': 'hyf:HY_Basin',\n     'fid': 15,\n     'gnis_id': 2730133,\n     'gnis_url': 'https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133',\n     'loaddate': '2018-07-17T15:44:28+00:00',\n     'name': 'South Atlantic-Gulf Region',\n     'next': '04',\n     'prev': '02',\n     'uri': 'https://geoconnex.us/ref/hu02/03'}"
             }
           ]
         },
@@ -143,7 +143,7 @@
               "exception": "ValidationError",
               "errorMessage": "'outflowNode' is a required property",
               "isError": true,
-              "message": "ValidationError: 'outflowNode' is a required property\n\nFailed validating 'required' in schema['allOf'][0]['allOf'][1]['properties']['properties']:\n    {'properties': {'code': {'type': 'string'},\n                    'inflowNode': {'format': 'uri', 'type': 'string'},\n                    'outflowNode': {'format': 'uri', 'type': 'string'},\n                    'upstreamBasin': {'items': {'format': 'uri',\n                                                'type': 'string'},\n                                      'type': 'array',\n                                      'uniqueItems': True}},\n     'required': ['outflowNode'],\n     'type': 'object'}\n\nOn instance['properties']:\n    {'@type': 'hyf:HY_Basin',\n     'fid': 15,\n     'gnis_id': 2730133,\n     'gnis_url': 'https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133',\n     'loaddate': '2018-07-17T15:44:28+00:00',\n     'name': 'South Atlantic-Gulf Region',\n     'next': '04',\n     'outflow': '03outflow',\n     'prev': '02',\n     'uri': 'https://geoconnex.us/ref/hu02/03'}"
+              "message": "ValidationError: 'outflowNode' is a required property\n\nFailed validating 'required' in schema['allOf'][0]['allOf'][1]['properties']['properties']:\n    {'properties': {'code': {'type': 'string'},\n                    'inflowNode': {'format': 'uri', 'type': 'string'},\n                    'outflowNode': {'format': 'uri', 'type': 'string'},\n                    'upperCatchment': {'items': {'format': 'uri',\n                                                 'type': 'string'},\n                                       'type': 'array',\n                                       'uniqueItems': True}},\n     'required': ['outflowNode'],\n     'type': 'object'}\n\nOn instance['properties']:\n    {'@type': 'hyf:HY_Basin',\n     'fid': 15,\n     'gnis_id': 2730133,\n     'gnis_url': 'https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133',\n     'loaddate': '2018-07-17T15:44:28+00:00',\n     'name': 'South Atlantic-Gulf Region',\n     'next': '04',\n     'outflow': '03outflow',\n     'prev': '02',\n     'uri': 'https://geoconnex.us/ref/hu02/03'}"
             }
           ]
         },
