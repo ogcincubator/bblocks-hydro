@@ -1,0 +1,988 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta
+            name="HY_Basin (Schema)"
+        >
+    <title>HY_Basin (Schema)</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sa {
+  color: #6c71c4;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="../../stylesheets/screen-39090b13.css" rel="stylesheet" media="screen" />
+    <link href="../../stylesheets/print-966d6edc.css" rel="stylesheet" media="print" />
+      <script src="../../javascripts/all-a25e0d73.js"></script>
+
+    <script>
+      $(function() { setupCodeCopy(); });
+    </script>
+  </head>
+
+  <body class="hydro hydro_hy_catchment hydro_hy_catchment_index" data-languages="[]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="../../images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="../../images/logo-4d9dfd05.svg" class="logo" alt="" />
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#hy_basin-ogc-hydro-hy_catchment" class="toc-h1 toc-link" data-title="HY_Basin ogc.hydro.hy_catchment">HY_Basin <code>ogc.hydro.hy_catchment</code></a>
+          </li>
+          <li>
+            <a href="#description" class="toc-h1 toc-link" data-title="Description">Description</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#hy_basin" class="toc-h2 toc-link" data-title="HY_Basin">HY_Basin</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#examples" class="toc-h1 toc-link" data-title="Examples">Examples</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#geojson-specialisation-example" class="toc-h2 toc-link" data-title="GeoJSON - specialisation example.">GeoJSON - specialisation example.</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#json-schema" class="toc-h1 toc-link" data-title="JSON Schema">JSON Schema</a>
+          </li>
+          <li>
+            <a href="#references" class="toc-h1 toc-link" data-title="References">References</a>
+          </li>
+          <li>
+            <a href="#for-developers" class="toc-h1 toc-link" data-title="For developers">For developers</a>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li>Version 1.0</li>
+            <li><a href='#'>HY_Basin</a></li>
+            <li><a href='https://blocks.ogc.org/register.html'>Building Blocks register</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='hy_basin-ogc-hydro-hy_catchment'>HY_Basin <code>ogc.hydro.hy_catchment</code></h1>
+<p>HY Feature example - HY_Basin</p>
+
+<p class="status">
+    <span data-rainbow-uri="http://www.opengis.net/def/status">Status</span>:
+    <a href="http://www.opengis.net/def/status/under-development" target="_blank" data-rainbow-uri>Under development</a>
+</p>
+
+<aside class="success">
+This building block is <strong><a href="https://github.com/ogcincubator/bblocks-hydro/blob/master/build/tests/hydro/hy_catchment/" target="_blank">valid</a></strong>
+</aside>
+<h1 id='description'>Description</h1><h2 id='hy_basin'>HY_Basin</h2>
+<p>A Building Block for a typical Class - HY_Basin</p>
+
+<p>The schema is derived directly from the UML model, and it linked to an ontology also derived from the UML model.</p>
+
+<p>The model schema is wrapped in a FG-JSON feature schema.</p>
+<h1 id='examples'>Examples</h1><h2 id='geojson-specialisation-example'>GeoJSON - specialisation example.</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feature"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"featureType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HY_Basin"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"gnis_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://geoconnex.us/ref/hu02/03"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"gnis_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2730133</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"South Atlantic-Gulf Region"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"fid"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"loaddate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-07-17T15:44:28+00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"prev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"next"</span><span class="p">:</span><span class="w"> </span><span class="s2">"04"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"03"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MultiPolygon"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">[</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="mf">-82.79192551924065</span><span class="p">,</span><span class="w">
+          </span><span class="mf">24.699718894664848</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="mf">-82.75341358941488</span><span class="p">,</span><span class="w">
+          </span><span class="mf">24.668448982060728</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="mf">-82.75066457497482</span><span class="p">,</span><span class="w">
+          </span><span class="mf">24.65974178394976</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="mf">-82.79192551924065</span><span class="p">,</span><span class="w">
+          </span><span class="mf">24.699718894664848</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"rel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alternate"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text/html"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This document as HTML"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://geoconnex.us/ref/hu02/03?f=html"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"rel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"collection"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HU02"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://reference.geoconnex.us/collections/hu02"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"rel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"prev"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://reference.geoconnex.us/collections/hu02/items/02?f=json"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div>
+<blockquote class="lang-specific json">
+  <p class="example-links">
+    <a target="_blank" href="https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/tests/hydro/hy_catchment/example_1_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fraw.githubusercontent.com%2Fogcincubator%2Fbblocks-hydro%2Fmaster%2Fbuild%2Ftests%2Fhydro%2Fhy_catchment%2Fexample_1_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+</blockquote>
+<h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">$schema</span><span class="pi">:</span> <span class="s">https://json-schema.org/draft/2019-09/schema</span>
+<span class="na">$id</span><span class="pi">:</span> <span class="s">https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature.json</span>
+<span class="na">$defs</span><span class="pi">:</span>
+  <span class="na">HY_Basin</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_Basin</span>
+    <span class="na">allOf</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/HY_Catchment'</span>
+    <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">properties</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+          <span class="na">properties</span><span class="pi">:</span>
+            <span class="na">upstreamBasin</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+              <span class="na">items</span><span class="pi">:</span>
+                <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+                <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+              <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+            <span class="na">code</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+            <span class="na">inflowNode</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+              <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+            <span class="na">outflowNode</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+              <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+          <span class="na">required</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="s">outflowNode</span>
+      <span class="na">required</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">properties</span>
+  <span class="na">HY_BasinAggregate</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_BasinAggregate</span>
+    <span class="na">allOf</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/HY_Catchment'</span>
+    <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">properties</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+          <span class="na">properties</span><span class="pi">:</span>
+            <span class="na">subBasin</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+              <span class="na">minItems</span><span class="pi">:</span> <span class="m">1</span>
+              <span class="na">items</span><span class="pi">:</span>
+                <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+                <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+              <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+          <span class="na">required</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="s">subBasin</span>
+      <span class="na">required</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">properties</span>
+  <span class="na">HY_Catchment</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_Catchment</span>
+    <span class="na">allOf</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/HY_HydroFeature'</span>
+    <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">properties</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+          <span class="na">properties</span><span class="pi">:</span>
+            <span class="na">containingCatchment</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+              <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+  <span class="na">HY_CatchmentArea</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_CatchmentArea</span>
+    <span class="na">allOf</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/HY_CatchmentRepresentation'</span>
+    <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+  <span class="na">HY_CatchmentBoundary</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_CatchmentBoundary</span>
+    <span class="na">allOf</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/HY_CatchmentRepresentation'</span>
+    <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+  <span class="na">HY_CatchmentRepresentation</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_CatchmentRepresentation</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+    <span class="na">properties</span><span class="pi">:</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+        <span class="na">properties</span><span class="pi">:</span>
+          <span class="s1">'</span><span class="s">@type'</span><span class="err">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">representedCatchment</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+            <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+        <span class="na">required</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s1">'</span><span class="s">@type'</span>
+        <span class="pi">-</span> <span class="s">representedCatchment</span>
+    <span class="na">required</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">properties</span>
+  <span class="na">HY_CrossSection</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_CrossSection</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+    <span class="na">properties</span><span class="pi">:</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+        <span class="na">properties</span><span class="pi">:</span>
+          <span class="s1">'</span><span class="s">@type'</span><span class="err">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">upstreamCrossSection</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+            <span class="na">items</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+              <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+            <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+          <span class="na">crossSectionPoint</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+            <span class="na">items</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+              <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+            <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+        <span class="na">required</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s1">'</span><span class="s">@type'</span>
+    <span class="na">required</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">properties</span>
+  <span class="na">HY_DistanceToRefPoint</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_DistanceToRefPoint</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+    <span class="na">properties</span><span class="pi">:</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+        <span class="na">properties</span><span class="pi">:</span>
+          <span class="s1">'</span><span class="s">@type'</span><span class="err">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">distanceValue</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+          <span class="na">accuracyStatement</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+          <span class="na">precisionStatement</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+        <span class="na">required</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s1">'</span><span class="s">@type'</span>
+        <span class="pi">-</span> <span class="s">distanceValue</span>
+    <span class="na">required</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">properties</span>
+  <span class="na">HY_FlowPath</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_FlowPath</span>
+    <span class="na">allOf</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/HY_CatchmentRepresentation'</span>
+    <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+  <span class="na">HY_Glacier</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_Glacier</span>
+    <span class="na">allOf</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/HY_HydroFeature'</span>
+    <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+  <span class="na">HY_HydroFeature</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_HydroFeature</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+    <span class="na">properties</span><span class="pi">:</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+        <span class="na">properties</span><span class="pi">:</span>
+          <span class="s1">'</span><span class="s">@type'</span><span class="err">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">identifier</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+            <span class="na">items</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+            <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+          <span class="na">name</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+            <span class="na">items</span><span class="pi">:</span>
+              <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/HY_HydroFeatureName'</span>
+            <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+          <span class="na">context</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+            <span class="na">items</span><span class="pi">:</span>
+              <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/HY_HydroFeatureContext'</span>
+            <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+        <span class="na">required</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s1">'</span><span class="s">@type'</span>
+    <span class="na">required</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">properties</span>
+  <span class="na">HY_HydroFeatureContext</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_HydroFeatureContext</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+    <span class="na">properties</span><span class="pi">:</span>
+      <span class="s1">'</span><span class="s">@type'</span><span class="err">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+      <span class="na">hydroFeature</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+        <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+      <span class="na">classification</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+        <span class="na">items</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+        <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+      <span class="na">spatialContext</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+        <span class="na">items</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+        <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+      <span class="na">temporalContext</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+        <span class="na">items</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+        <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">required</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s1">'</span><span class="s">@type'</span>
+  <span class="na">HY_HydroFeatureName</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_HydroFeatureName</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+  <span class="na">HY_HydrographicNetwork</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_HydrographicNetwork</span>
+    <span class="na">allOf</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/HY_Network'</span>
+    <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+  <span class="na">HY_IndirectPosition</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_IndirectPosition</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+    <span class="na">properties</span><span class="pi">:</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+        <span class="na">properties</span><span class="pi">:</span>
+          <span class="s1">'</span><span class="s">@type'</span><span class="err">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">distanceToRefPoint</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+            <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+          <span class="na">relativePosition</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+            <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+          <span class="na">referencePoint</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+            <span class="na">minItems</span><span class="pi">:</span> <span class="m">1</span>
+            <span class="na">items</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+              <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+            <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+          <span class="na">mileageCS</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+            <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+        <span class="na">required</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s1">'</span><span class="s">@type'</span>
+        <span class="pi">-</span> <span class="s">referencePoint</span>
+    <span class="na">required</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">properties</span>
+  <span class="na">HY_LongitudinalSection</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_LongitudinalSection</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+    <span class="na">properties</span><span class="pi">:</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+        <span class="na">properties</span><span class="pi">:</span>
+          <span class="s1">'</span><span class="s">@type'</span><span class="err">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">longitudinalSectionPoint</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+            <span class="na">items</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+              <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+            <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+        <span class="na">required</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s1">'</span><span class="s">@type'</span>
+    <span class="na">required</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">properties</span>
+  <span class="na">HY_MileageSystemAxis</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_MileageSystemAxis</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+    <span class="na">properties</span><span class="pi">:</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+        <span class="na">properties</span><span class="pi">:</span>
+          <span class="s1">'</span><span class="s">@type'</span><span class="err">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">precision</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+        <span class="na">required</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s1">'</span><span class="s">@type'</span>
+    <span class="na">required</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">properties</span>
+  <span class="na">HY_Network</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_Network</span>
+    <span class="na">allOf</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/HY_CatchmentRepresentation'</span>
+    <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+  <span class="na">HY_Outfall</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_Outfall</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+    <span class="na">properties</span><span class="pi">:</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+        <span class="na">properties</span><span class="pi">:</span>
+          <span class="s1">'</span><span class="s">@type'</span><span class="err">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">receivingBasin</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+            <span class="na">items</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+              <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+            <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+          <span class="na">contributingBasin</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+            <span class="na">minItems</span><span class="pi">:</span> <span class="m">1</span>
+            <span class="na">items</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+              <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+            <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+          <span class="na">position</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+            <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+        <span class="na">required</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s1">'</span><span class="s">@type'</span>
+        <span class="pi">-</span> <span class="s">contributingBasin</span>
+        <span class="pi">-</span> <span class="s">position</span>
+    <span class="na">required</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">properties</span>
+  <span class="na">HY_RefPointType</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_RefPointType</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+    <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+  <span class="na">HY_ReferencePoint</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_ReferencePoint</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+    <span class="na">properties</span><span class="pi">:</span>
+      <span class="na">geometry</span><span class="pi">:</span>
+        <span class="na">$ref</span><span class="pi">:</span> <span class="s">https://geojson.org/schema/Point.json</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+        <span class="na">properties</span><span class="pi">:</span>
+          <span class="s1">'</span><span class="s">@type'</span><span class="err">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">refPointType</span><span class="pi">:</span>
+            <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/HY_RefPointType'</span>
+          <span class="na">networkLocation</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+            <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+        <span class="na">required</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s1">'</span><span class="s">@type'</span>
+    <span class="na">required</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">properties</span>
+  <span class="na">HY_RelativePosition</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_RelativePosition</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+    <span class="na">properties</span><span class="pi">:</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+        <span class="na">properties</span><span class="pi">:</span>
+          <span class="s1">'</span><span class="s">@type'</span><span class="err">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">description</span><span class="pi">:</span>
+            <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/HY_RelativePositionDescription'</span>
+          <span class="na">percentage</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">number</span>
+        <span class="na">required</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s1">'</span><span class="s">@type'</span>
+    <span class="na">required</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">properties</span>
+  <span class="na">HY_RelativePositionDescription</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_RelativePositionDescription</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+    <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+  <span class="na">HY_Reservoir</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_Reservoir</span>
+    <span class="na">allOf</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/HY_HydroFeature'</span>
+    <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+  <span class="na">HY_RiverMileageCS</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_RiverMileageCS</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+    <span class="na">properties</span><span class="pi">:</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+        <span class="na">properties</span><span class="pi">:</span>
+          <span class="s1">'</span><span class="s">@type'</span><span class="err">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">axis</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+            <span class="na">minItems</span><span class="pi">:</span> <span class="m">1</span>
+            <span class="na">items</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+              <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+            <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+        <span class="na">required</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s1">'</span><span class="s">@type'</span>
+        <span class="pi">-</span> <span class="s">axis</span>
+    <span class="na">required</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">properties</span>
+  <span class="na">HY_WaterBody</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_WaterBody</span>
+    <span class="na">allOf</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/HY_HydroFeature'</span>
+    <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">properties</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+          <span class="na">properties</span><span class="pi">:</span>
+            <span class="na">hydrographicNetwork</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+              <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+          <span class="na">required</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="s">hydrographicNetwork</span>
+      <span class="na">required</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">properties</span>
+  <span class="na">HY_WaterBodySegment</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_WaterBodySegment</span>
+    <span class="na">allOf</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/HY_HydroFeature'</span>
+    <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">properties</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+          <span class="na">properties</span><span class="pi">:</span>
+            <span class="na">streamCrossSection</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+              <span class="na">items</span><span class="pi">:</span>
+                <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+                <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+              <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+            <span class="na">streamLongitudinalSection</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+              <span class="na">items</span><span class="pi">:</span>
+                <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+                <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+              <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+            <span class="na">upstreamSegment</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+              <span class="na">items</span><span class="pi">:</span>
+                <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+                <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+              <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+            <span class="na">downstreamSegment</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+              <span class="na">items</span><span class="pi">:</span>
+                <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+                <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+              <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+            <span class="na">waterBody</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+              <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+            <span class="na">fixedLandmark</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+              <span class="na">items</span><span class="pi">:</span>
+                <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+                <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+              <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+          <span class="na">required</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="s">waterBody</span>
+      <span class="na">required</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">properties</span>
+  <span class="na">HY_WaterBodyStratum</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_WaterBodyStratum</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+    <span class="na">properties</span><span class="pi">:</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+        <span class="na">properties</span><span class="pi">:</span>
+          <span class="s1">'</span><span class="s">@type'</span><span class="err">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">stratumType</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+            <span class="na">items</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+            <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+          <span class="na">segment</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+            <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+          <span class="na">storage</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+            <span class="na">items</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+              <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+            <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+        <span class="na">required</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s1">'</span><span class="s">@type'</span>
+        <span class="pi">-</span> <span class="s">segment</span>
+    <span class="na">required</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">properties</span>
+  <span class="na">HY_Water_LiquidPhase</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_Water_LiquidPhase</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+    <span class="na">properties</span><span class="pi">:</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+        <span class="na">properties</span><span class="pi">:</span>
+          <span class="s1">'</span><span class="s">@type'</span><span class="err">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">accumulatingWaterBody</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+            <span class="na">items</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+              <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+            <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+        <span class="na">required</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s1">'</span><span class="s">@type'</span>
+    <span class="na">required</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">properties</span>
+  <span class="na">HY_Water_SolidPhase</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_Water_SolidPhase</span>
+    <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+    <span class="na">properties</span><span class="pi">:</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+        <span class="na">properties</span><span class="pi">:</span>
+          <span class="s1">'</span><span class="s">@type'</span><span class="err">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+          <span class="na">coveredWaterBody</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+            <span class="na">items</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+              <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+            <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+          <span class="na">snowmelt</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+            <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+          <span class="na">accumulatingGlacier</span><span class="pi">:</span>
+            <span class="na">type</span><span class="pi">:</span> <span class="s">array</span>
+            <span class="na">items</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+              <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+            <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+        <span class="na">required</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s1">'</span><span class="s">@type'</span>
+    <span class="na">required</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">properties</span>
+  <span class="na">HY_Watershed</span><span class="pi">:</span>
+    <span class="na">$anchor</span><span class="pi">:</span> <span class="s">HY_Watershed</span>
+    <span class="na">allOf</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">$ref</span><span class="pi">:</span> <span class="s1">'</span><span class="s">#/$defs/HY_CatchmentBoundary'</span>
+    <span class="pi">-</span> <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">properties</span><span class="pi">:</span>
+          <span class="na">type</span><span class="pi">:</span> <span class="s">object</span>
+          <span class="na">properties</span><span class="pi">:</span>
+            <span class="na">outfall</span><span class="pi">:</span>
+              <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
+              <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+
+</code></pre></div>
+<blockquote>
+<p><a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=yaml&amp;dataUrl=https%3A%2F%2Fraw.githubusercontent.com%2Fogcincubator%2Fbblocks-hydro%2Fmaster%2Fbuild%2Fannotated%2Fhydro%2Fhy_catchment%2Fschema.yaml&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on YAML Viewer</a></p>
+</blockquote>
+
+<p>Links to the schema:</p>
+
+<ul>
+<li>YAML version: <a href="https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema.yaml" target="_blank">https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema.yaml</a></li>
+<li>JSON version: <a href="https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema.json" target="_blank">https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema.json</a></li>
+</ul>
+<h1 id='references'>References</h1>
+<ul>
+<li><a href="https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7">OGC API - Features, Part 1, 7.16.2: Feature Response</a></li>
+</ul>
+<h1 id='for-developers'>For developers</h1>
+<p>The source code for this Building Block can be found in the following repository:</p>
+
+<ul>
+<li>URL: <a href="https://github.com/ogcincubator/bblocks-hydro" target="_blank">https://github.com/ogcincubator/bblocks-hydro</a></li>
+<li>Path:
+<code><a href="https://github.com/ogcincubator/bblocks-hydro/blob/HEAD/_sources/hy_catchment" target="_blank">_sources/hy_catchment</a></code></li>
+</ul>
+
+      </div>
+      <div class="dark-box">
+      </div>
+    </div>
+  </body>
+</html>
