@@ -1,4 +1,6 @@
 "$schema": https://json-schema.org/draft/2020-12/schema
 description: 'HY_Basin Feature'
-$ref: bblocks://ogc.hydro.hyf.model#$defs/HY_Basin
+allOf:
+  - $ref: bblocks://ogc.hydro.hyf.model#/$defs/HY_Basin
+  - $ref: bblocks://ogc.geo.features.feature
 
