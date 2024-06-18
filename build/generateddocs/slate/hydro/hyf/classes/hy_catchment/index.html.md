@@ -54,8 +54,10 @@ The model schema is wrapped in a FG-JSON feature schema.
 ```json
 {
   "type": "Feature",
+
   "featureType": "HY_Basin",
   "properties": {
+      "@type": "hyf:HY_Basin",
     "gnis_url": "https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133",
     "uri": "https://geoconnex.us/ref/hu02/03",
     "gnis_id": 2730133,
@@ -67,9 +69,9 @@ The model schema is wrapped in a FG-JSON feature schema.
   },
   "id": "03",
   "geometry": {
-    "type": "MultiPolygon",
+    "type": "Polygon",
     "coordinates": [
-      [
+
         [
           -82.79192551924065,
           24.699718894664848
@@ -86,7 +88,7 @@ The model schema is wrapped in a FG-JSON feature schema.
           -82.79192551924065,
           24.699718894664848
         ]
-      ]
+      
     ]
 
   },
@@ -128,6 +130,7 @@ The model schema is wrapped in a FG-JSON feature schema.
   "type": "Feature",
   "featureType": "HY_Basin",
   "properties": {
+    "@type": "hyf:HY_Basin",
     "gnis_url": "https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133",
     "uri": "https://geoconnex.us/ref/hu02/03",
     "gnis_id": 2730133,
@@ -139,25 +142,23 @@ The model schema is wrapped in a FG-JSON feature schema.
   },
   "id": "03",
   "geometry": {
-    "type": "MultiPolygon",
+    "type": "Polygon",
     "coordinates": [
       [
-        [
-          -82.79192551924065,
-          24.699718894664848
-        ],
-        [
-          -82.75341358941488,
-          24.668448982060728
-        ],
-        [
-          -82.75066457497482,
-          24.65974178394976
-        ],
-        [
-          -82.79192551924065,
-          24.699718894664848
-        ]
+        -82.79192551924065,
+        24.699718894664848
+      ],
+      [
+        -82.75341358941488,
+        24.668448982060728
+      ],
+      [
+        -82.75066457497482,
+        24.65974178394976
+      ],
+      [
+        -82.79192551924065,
+        24.699718894664848
       ]
     ]
   },
@@ -203,20 +204,21 @@ The model schema is wrapped in a FG-JSON feature schema.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.com/features/03> a geojson:Feature ;
-    rdfs:seeAlso [ rdfs:label "This document as HTML" ;
+<http://example.com/features/03> a geojson:Feature,
+        hyf:HY_Basin ;
+    rdfs:seeAlso [ rdfs:label "HU02" ;
+            dcterms:type "application/json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/collection> ;
+            oa:hasTarget <https://reference.geoconnex.us/collections/hu02> ],
+        [ rdfs:label "This document as HTML" ;
             dcterms:type "text/html" ;
             ns1:relation <http://www.iana.org/assignments/relation/alternate> ;
             oa:hasTarget <https://geoconnex.us/ref/hu02/03?f=html> ],
         [ dcterms:type "application/json" ;
             ns1:relation <http://www.iana.org/assignments/relation/prev> ;
-            oa:hasTarget <https://reference.geoconnex.us/collections/hu02/items/02?f=json> ],
-        [ rdfs:label "HU02" ;
-            dcterms:type "application/json" ;
-            ns1:relation <http://www.iana.org/assignments/relation/collection> ;
-            oa:hasTarget <https://reference.geoconnex.us/collections/hu02> ] ;
-    geojson:geometry [ a geojson:MultiPolygon ;
-            geojson:coordinates ( ( ( -8.279193e+01 2.469972e+01 ) ( -8.275341e+01 2.466845e+01 ) ( -8.275066e+01 2.465974e+01 ) ( -8.279193e+01 2.469972e+01 ) ) ) ] ;
+            oa:hasTarget <https://reference.geoconnex.us/collections/hu02/items/02?f=json> ] ;
+    geojson:geometry [ a geojson:Polygon ;
+            geojson:coordinates ( ( -8.279193e+01 2.469972e+01 ) ( -8.275341e+01 2.466845e+01 ) ( -8.275066e+01 2.465974e+01 ) ( -8.279193e+01 2.469972e+01 ) ) ] ;
     hyf:upstreamBasin <http://example.com/features/02> .
 
 

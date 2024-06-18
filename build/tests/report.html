@@ -51,7 +51,7 @@
     <body>
         <div class="container">
             <h1 class="title">Building blocks validation report</h1>
-            <small class="datetime">Generated at 2024-06-18T18:17:33.702196+00:00</small>
+            <small class="datetime">Generated at 2024-06-18T18:33:22.632436+00:00</small>
                 <p class="summary fw-semibold text-danger">
                     Number of passing building blocks: 1 / 2 (50%)
                 </p>
@@ -127,24 +127,22 @@
                                                                     <div class="font-monospace entry-message section-files ">Output JSON-LD example_1_1.jsonld created</div>
                                                                     <div class="font-monospace entry-message section-files ">Output Turtle example_1_1.ttl created</div>
                                                                     <div class="font-monospace subsection-title mt-2">JSON Schema</div>
-                                                                    <div class="font-monospace entry-message section-json_schema text-danger">ValidationError: &#x27;@type&#x27; is a required property
+                                                                    <div class="font-monospace entry-message section-json_schema text-danger">ValidationError: &#x27;outflowNode&#x27; is a required property
 
-Failed validating &#x27;required&#x27; in schema[&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][0][&#x27;properties&#x27;][&#x27;properties&#x27;]:
-    {&#x27;properties&#x27;: {&#x27;@type&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;},
-                    &#x27;context&#x27;: {&#x27;items&#x27;: {&#x27;$ref&#x27;: &#x27;#/$defs/HY_HydroFeatureContext&#x27;},
-                                &#x27;type&#x27;: &#x27;array&#x27;,
-                                &#x27;uniqueItems&#x27;: True},
-                    &#x27;identifier&#x27;: {&#x27;items&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;},
-                                   &#x27;type&#x27;: &#x27;array&#x27;,
-                                   &#x27;uniqueItems&#x27;: True},
-                    &#x27;name&#x27;: {&#x27;items&#x27;: {&#x27;$ref&#x27;: &#x27;#/$defs/HY_HydroFeatureName&#x27;},
-                             &#x27;type&#x27;: &#x27;array&#x27;,
-                             &#x27;uniqueItems&#x27;: True}},
-     &#x27;required&#x27;: [&#x27;@type&#x27;],
+Failed validating &#x27;required&#x27; in schema[&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][1][&#x27;properties&#x27;][&#x27;properties&#x27;]:
+    {&#x27;properties&#x27;: {&#x27;code&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;},
+                    &#x27;inflowNode&#x27;: {&#x27;format&#x27;: &#x27;uri&#x27;, &#x27;type&#x27;: &#x27;string&#x27;},
+                    &#x27;outflowNode&#x27;: {&#x27;format&#x27;: &#x27;uri&#x27;, &#x27;type&#x27;: &#x27;string&#x27;},
+                    &#x27;upstreamBasin&#x27;: {&#x27;items&#x27;: {&#x27;format&#x27;: &#x27;uri&#x27;,
+                                                &#x27;type&#x27;: &#x27;string&#x27;},
+                                      &#x27;type&#x27;: &#x27;array&#x27;,
+                                      &#x27;uniqueItems&#x27;: True}},
+     &#x27;required&#x27;: [&#x27;outflowNode&#x27;],
      &#x27;type&#x27;: &#x27;object&#x27;}
 
 On instance[&#x27;properties&#x27;]:
-    {&#x27;fid&#x27;: 15,
+    {&#x27;@type&#x27;: &#x27;hyf:HY_Basin&#x27;,
+     &#x27;fid&#x27;: 15,
      &#x27;gnis_id&#x27;: 2730133,
      &#x27;gnis_url&#x27;: &#x27;https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133&#x27;,
      &#x27;loaddate&#x27;: &#x27;2018-07-17T15:44:28+00:00&#x27;,

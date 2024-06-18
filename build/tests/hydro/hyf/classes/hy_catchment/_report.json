@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hydro.hyf.classes.hy_catchment - HY_Basin",
   "bblockName": "HY_Basin",
   "bblockId": "ogc.hydro.hyf.classes.hy_catchment",
-  "generated": "2024-06-18T18:17:33.689746+00:00",
+  "generated": "2024-06-18T18:33:22.620132+00:00",
   "result": false,
   "items": [
     {
@@ -45,7 +45,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_1_1.ttl",
-              "size": 45,
+              "size": 44,
               "isError": false,
               "message": "Output Turtle example_1_1.ttl created"
             }
@@ -59,9 +59,9 @@
               "op": "validation",
               "result": false,
               "exception": "ValidationError",
-              "errorMessage": "'@type' is a required property",
+              "errorMessage": "'outflowNode' is a required property",
               "isError": true,
-              "message": "ValidationError: '@type' is a required property\n\nFailed validating 'required' in schema['allOf'][0]['allOf'][0]['allOf'][0]['properties']['properties']:\n    {'properties': {'@type': {'type': 'string'},\n                    'context': {'items': {'$ref': '#/$defs/HY_HydroFeatureContext'},\n                                'type': 'array',\n                                'uniqueItems': True},\n                    'identifier': {'items': {'type': 'string'},\n                                   'type': 'array',\n                                   'uniqueItems': True},\n                    'name': {'items': {'$ref': '#/$defs/HY_HydroFeatureName'},\n                             'type': 'array',\n                             'uniqueItems': True}},\n     'required': ['@type'],\n     'type': 'object'}\n\nOn instance['properties']:\n    {'fid': 15,\n     'gnis_id': 2730133,\n     'gnis_url': 'https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133',\n     'loaddate': '2018-07-17T15:44:28+00:00',\n     'name': 'South Atlantic-Gulf Region',\n     'next': '04',\n     'prev': '02',\n     'uri': 'https://geoconnex.us/ref/hu02/03'}"
+              "message": "ValidationError: 'outflowNode' is a required property\n\nFailed validating 'required' in schema['allOf'][0]['allOf'][1]['properties']['properties']:\n    {'properties': {'code': {'type': 'string'},\n                    'inflowNode': {'format': 'uri', 'type': 'string'},\n                    'outflowNode': {'format': 'uri', 'type': 'string'},\n                    'upstreamBasin': {'items': {'format': 'uri',\n                                                'type': 'string'},\n                                      'type': 'array',\n                                      'uniqueItems': True}},\n     'required': ['outflowNode'],\n     'type': 'object'}\n\nOn instance['properties']:\n    {'@type': 'hyf:HY_Basin',\n     'fid': 15,\n     'gnis_id': 2730133,\n     'gnis_url': 'https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133',\n     'loaddate': '2018-07-17T15:44:28+00:00',\n     'name': 'South Atlantic-Gulf Region',\n     'next': '04',\n     'prev': '02',\n     'uri': 'https://geoconnex.us/ref/hu02/03'}"
             }
           ]
         },
