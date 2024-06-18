@@ -10,7 +10,7 @@ description: |
  Features from HY_Features model
 
 # Customize the following prefix (will be prepended to the path of the building blocks):
-identifier-prefix: ogc.hydro
+identifier-prefix: ogc.hydro.hyf.
 
 # List of imports ("default" is an alias for the main OGC Building Blocks Register)
 imports:
