@@ -1,0 +1,16 @@
+{
+  "@base": "https://geoconnex.us/ref/hu02/",
+  "hyf": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/",
+  "prev": {
+    "@type": "@id",
+    "@id": "hyf:upstreamBasin"
+  },
+  "upstreamBasin": {
+    "@type": "@id",
+    "@id": "hyf:upstreamBasin"
+  },
+   "hyf:upstreamBasin": {
+    "@type": "@id",
+    "@id": "hyf:upstreamBasin"
+  }
+}

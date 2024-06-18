@@ -5,4 +5,4 @@
   base-uri: http://example.com/features/
   snippets:
     - language: json
-      ref: examples/feature.json
+      ref: examples/hy_catchment.json
