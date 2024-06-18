@@ -51,7 +51,7 @@
     <body>
         <div class="container">
             <h1 class="title">Building blocks validation report</h1>
-            <small class="datetime">Generated at 2024-06-18T18:33:22.632436+00:00</small>
+            <small class="datetime">Generated at 2024-06-18T18:48:42.853895+00:00</small>
                 <p class="summary fw-semibold text-danger">
                     Number of passing building blocks: 1 / 2 (50%)
                 </p>
@@ -101,7 +101,7 @@
                             <div class="accordion-collapse collapse show" id="bblock-collapse-ogc.hydro.hyf.classes.hy_catchment">
                                 <div class="accordion-body">
                                         <p class="summary fw-semibold text-danger">
-                                            Test passed: 0 / 1
+                                            Test passed: 0 / 2
                                         </p>
                                         <div class="card mb-2 validation-item ">
                                             <div class="card-body">
@@ -148,6 +148,58 @@ On instance[&#x27;properties&#x27;]:
      &#x27;loaddate&#x27;: &#x27;2018-07-17T15:44:28+00:00&#x27;,
      &#x27;name&#x27;: &#x27;South Atlantic-Gulf Region&#x27;,
      &#x27;next&#x27;: &#x27;04&#x27;,
+     &#x27;prev&#x27;: &#x27;02&#x27;,
+     &#x27;uri&#x27;: &#x27;https://geoconnex.us/ref/hu02/03&#x27;}</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card mb-2 validation-item ">
+                                            <div class="card-body">
+                                                <div class="card-title mb-0">
+                                                    <button type="button" class="btn btn-sm btn-primary collapsed"
+                                                            data-bs-toggle="collapse" data-bs-target="#uid-2"
+                                                            aria-expanded="false" aria-controls="uid-2"
+                                                            style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                                                        <i class="bi bi-caret-right-fill caret"></i>
+                                                        Details
+                                                    </button>
+                                                    <a href="hydro/hyf/classes/hy_catchment/example_2_1.json" target="_blank">example_2_1.json</a>
+                                                    <span class="badge bg-secondary example">Example</span>
+                                                    <div class="float-end">
+                                                            <span class="badge text-bg-danger me-2">Failed</span>
+                                                    </div>
+                                                </div>
+                                                <div class="card-text mt-2 validation-text collapse" id="uid-2">
+                                                    <div class="validation-text-inner">
+                                                                    <div class="font-monospace subsection-title mt-2">Files</div>
+                                                                    <div class="font-monospace entry-message section-files ">Using example_2_1.json from examples</div>
+                                                                    <div class="font-monospace entry-message section-files ">JSON-LD context is present - uplifting</div>
+                                                                    <div class="font-monospace entry-message section-files ">Output JSON-LD example_2_1.jsonld created</div>
+                                                                    <div class="font-monospace entry-message section-files ">Output Turtle example_2_1.ttl created</div>
+                                                                    <div class="font-monospace subsection-title mt-2">JSON Schema</div>
+                                                                    <div class="font-monospace entry-message section-json_schema text-danger">ValidationError: &#x27;outflowNode&#x27; is a required property
+
+Failed validating &#x27;required&#x27; in schema[&#x27;allOf&#x27;][0][&#x27;allOf&#x27;][1][&#x27;properties&#x27;][&#x27;properties&#x27;]:
+    {&#x27;properties&#x27;: {&#x27;code&#x27;: {&#x27;type&#x27;: &#x27;string&#x27;},
+                    &#x27;inflowNode&#x27;: {&#x27;format&#x27;: &#x27;uri&#x27;, &#x27;type&#x27;: &#x27;string&#x27;},
+                    &#x27;outflowNode&#x27;: {&#x27;format&#x27;: &#x27;uri&#x27;, &#x27;type&#x27;: &#x27;string&#x27;},
+                    &#x27;upstreamBasin&#x27;: {&#x27;items&#x27;: {&#x27;format&#x27;: &#x27;uri&#x27;,
+                                                &#x27;type&#x27;: &#x27;string&#x27;},
+                                      &#x27;type&#x27;: &#x27;array&#x27;,
+                                      &#x27;uniqueItems&#x27;: True}},
+     &#x27;required&#x27;: [&#x27;outflowNode&#x27;],
+     &#x27;type&#x27;: &#x27;object&#x27;}
+
+On instance[&#x27;properties&#x27;]:
+    {&#x27;@type&#x27;: &#x27;hyf:HY_Basin&#x27;,
+     &#x27;fid&#x27;: 15,
+     &#x27;gnis_id&#x27;: 2730133,
+     &#x27;gnis_url&#x27;: &#x27;https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133&#x27;,
+     &#x27;loaddate&#x27;: &#x27;2018-07-17T15:44:28+00:00&#x27;,
+     &#x27;name&#x27;: &#x27;South Atlantic-Gulf Region&#x27;,
+     &#x27;next&#x27;: &#x27;04&#x27;,
+     &#x27;outflow&#x27;: &#x27;03outflow&#x27;,
      &#x27;prev&#x27;: &#x27;02&#x27;,
      &#x27;uri&#x27;: &#x27;https://geoconnex.us/ref/hu02/03&#x27;}</div>
                                                     </div>

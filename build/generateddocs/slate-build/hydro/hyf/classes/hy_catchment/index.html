@@ -330,6 +330,9 @@
                   <li>
                     <a href="#geojson-specialisation-example" class="toc-h2 toc-link" data-title="GeoJSON - specialisation example.">GeoJSON - specialisation example.</a>
                   </li>
+                  <li>
+                    <a href="#basin-as-node-point" class="toc-h2 toc-link" data-title="Basin as node point.">Basin as node point.</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -388,9 +391,9 @@ Validation for this building block has <strong><a href="https://github.com/ogcin
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"03"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Polygon"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MultiPolygon"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-
+      </span><span class="p">[</span><span class="w">
         </span><span class="p">[</span><span class="w">
           </span><span class="mf">-82.79192551924065</span><span class="p">,</span><span class="w">
           </span><span class="mf">24.699718894664848</span><span class="w">
@@ -407,7 +410,7 @@ Validation for this building block has <strong><a href="https://github.com/ogcin
           </span><span class="mf">-82.79192551924065</span><span class="p">,</span><span class="w">
           </span><span class="mf">24.699718894664848</span><span class="w">
         </span><span class="p">]</span><span class="w">
-
+      </span><span class="p">]</span><span class="w">
     </span><span class="p">]</span><span class="w">
 
   </span><span class="p">},</span><span class="w">
@@ -455,23 +458,25 @@ Validation for this building block has <strong><a href="https://github.com/ogcin
   </span><span class="p">},</span><span class="w">
   </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"03"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Polygon"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MultiPolygon"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">[</span><span class="w">
-        </span><span class="mf">-82.79192551924065</span><span class="p">,</span><span class="w">
-        </span><span class="mf">24.699718894664848</span><span class="w">
-      </span><span class="p">],</span><span class="w">
-      </span><span class="p">[</span><span class="w">
-        </span><span class="mf">-82.75341358941488</span><span class="p">,</span><span class="w">
-        </span><span class="mf">24.668448982060728</span><span class="w">
-      </span><span class="p">],</span><span class="w">
-      </span><span class="p">[</span><span class="w">
-        </span><span class="mf">-82.75066457497482</span><span class="p">,</span><span class="w">
-        </span><span class="mf">24.65974178394976</span><span class="w">
-      </span><span class="p">],</span><span class="w">
-      </span><span class="p">[</span><span class="w">
-        </span><span class="mf">-82.79192551924065</span><span class="p">,</span><span class="w">
-        </span><span class="mf">24.699718894664848</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="mf">-82.79192551924065</span><span class="p">,</span><span class="w">
+          </span><span class="mf">24.699718894664848</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="mf">-82.75341358941488</span><span class="p">,</span><span class="w">
+          </span><span class="mf">24.668448982060728</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="mf">-82.75066457497482</span><span class="p">,</span><span class="w">
+          </span><span class="mf">24.65974178394976</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="mf">-82.79192551924065</span><span class="p">,</span><span class="w">
+          </span><span class="mf">24.699718894664848</span><span class="w">
+        </span><span class="p">]</span><span class="w">
       </span><span class="p">]</span><span class="w">
     </span><span class="p">]</span><span class="w">
   </span><span class="p">},</span><span class="w">
@@ -513,19 +518,19 @@ Validation for this building block has <strong><a href="https://github.com/ogcin
 
 </span><span class="nl">&lt;http://example.com/features/03&gt;</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">geojson:</span><span class="n">Feature,
 </span><span class="w">        </span><span class="nn">hyf:</span><span class="n">HY_Basin</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">rdfs:</span><span class="n">seeAlso</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">rdfs:</span><span class="n">label</span><span class="w"> </span><span class="s">"HU02"</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">rdfs:</span><span class="n">seeAlso</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">dcterms:</span><span class="n">type</span><span class="w"> </span><span class="s">"application/json"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">ns1:</span><span class="n">relation</span><span class="w"> </span><span class="nl">&lt;http://www.iana.org/assignments/relation/prev&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">oa:</span><span class="n">hasTarget</span><span class="w"> </span><span class="nl">&lt;https://reference.geoconnex.us/collections/hu02/items/02?f=json&gt;</span><span class="w"> </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w"> </span><span class="nn">rdfs:</span><span class="n">label</span><span class="w"> </span><span class="s">"HU02"</span><span class="w"> </span><span class="p">;</span><span class="w">
             </span><span class="nn">dcterms:</span><span class="n">type</span><span class="w"> </span><span class="s">"application/json"</span><span class="w"> </span><span class="p">;</span><span class="w">
             </span><span class="nn">ns1:</span><span class="n">relation</span><span class="w"> </span><span class="nl">&lt;http://www.iana.org/assignments/relation/collection&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
             </span><span class="nn">oa:</span><span class="n">hasTarget</span><span class="w"> </span><span class="nl">&lt;https://reference.geoconnex.us/collections/hu02&gt;</span><span class="w"> </span><span class="p">],</span><span class="w">
         </span><span class="p">[</span><span class="w"> </span><span class="nn">rdfs:</span><span class="n">label</span><span class="w"> </span><span class="s">"This document as HTML"</span><span class="w"> </span><span class="p">;</span><span class="w">
             </span><span class="nn">dcterms:</span><span class="n">type</span><span class="w"> </span><span class="s">"text/html"</span><span class="w"> </span><span class="p">;</span><span class="w">
             </span><span class="nn">ns1:</span><span class="n">relation</span><span class="w"> </span><span class="nl">&lt;http://www.iana.org/assignments/relation/alternate&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
-            </span><span class="nn">oa:</span><span class="n">hasTarget</span><span class="w"> </span><span class="nl">&lt;https://geoconnex.us/ref/hu02/03?f=html&gt;</span><span class="w"> </span><span class="p">],</span><span class="w">
-        </span><span class="p">[</span><span class="w"> </span><span class="nn">dcterms:</span><span class="n">type</span><span class="w"> </span><span class="s">"application/json"</span><span class="w"> </span><span class="p">;</span><span class="w">
-            </span><span class="nn">ns1:</span><span class="n">relation</span><span class="w"> </span><span class="nl">&lt;http://www.iana.org/assignments/relation/prev&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
-            </span><span class="nn">oa:</span><span class="n">hasTarget</span><span class="w"> </span><span class="nl">&lt;https://reference.geoconnex.us/collections/hu02/items/02?f=json&gt;</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
-    </span><span class="nn">geojson:</span><span class="n">geometry</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">geojson:</span><span class="n">Polygon</span><span class="w"> </span><span class="p">;</span><span class="w">
-            </span><span class="nn">geojson:</span><span class="n">coordinates</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">-8.2</span><span class="mi">79193</span><span class="n">e+01</span><span class="w"> </span><span class="mf">2.4</span><span class="mi">69972</span><span class="n">e+01</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">-8.2</span><span class="mi">75341</span><span class="n">e+01</span><span class="w"> </span><span class="mf">2.4</span><span class="mi">66845</span><span class="n">e+01</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">-8.2</span><span class="mi">75066</span><span class="n">e+01</span><span class="w"> </span><span class="mf">2.4</span><span class="mi">65974</span><span class="n">e+01</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">-8.2</span><span class="mi">79193</span><span class="n">e+01</span><span class="w"> </span><span class="mf">2.4</span><span class="mi">69972</span><span class="n">e+01</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">oa:</span><span class="n">hasTarget</span><span class="w"> </span><span class="nl">&lt;https://geoconnex.us/ref/hu02/03?f=html&gt;</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">geojson:</span><span class="n">geometry</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">geojson:</span><span class="n">MultiPolygon</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">geojson:</span><span class="n">coordinates</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">-8.2</span><span class="mi">79193</span><span class="n">e+01</span><span class="w"> </span><span class="mf">2.4</span><span class="mi">69972</span><span class="n">e+01</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">-8.2</span><span class="mi">75341</span><span class="n">e+01</span><span class="w"> </span><span class="mf">2.4</span><span class="mi">66845</span><span class="n">e+01</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">-8.2</span><span class="mi">75066</span><span class="n">e+01</span><span class="w"> </span><span class="mf">2.4</span><span class="mi">65974</span><span class="n">e+01</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">-8.2</span><span class="mi">79193</span><span class="n">e+01</span><span class="w"> </span><span class="mf">2.4</span><span class="mi">69972</span><span class="n">e+01</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
     </span><span class="nn">hyf:</span><span class="n">upstreamBasin</span><span class="w"> </span><span class="nl">&lt;http://example.com/features/02&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
 
 
@@ -533,6 +538,141 @@ Validation for this building block has <strong><a href="https://github.com/ogcin
 <blockquote class="lang-specific turtle">
   <p class="example-links">
     <a target="_blank" href="https://ogcincubator.github.io/bblocks-hydro/build/tests/hydro/hyf/classes/hy_catchment/example_1_1.ttl">Open in new window</a>
+</blockquote>
+<h2 id='basin-as-node-point'>Basin as node point.</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feature"</span><span class="p">,</span><span class="w">
+
+  </span><span class="nl">"featureType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HY_Basin"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hyf:HY_Basin"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"gnis_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://geoconnex.us/ref/hu02/03"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"gnis_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2730133</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"South Atlantic-Gulf Region"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"fid"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"loaddate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-07-17T15:44:28+00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"prev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"next"</span><span class="p">:</span><span class="w"> </span><span class="s2">"04"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"outflow"</span><span class="p">:</span><span class="w"> </span><span class="s2">"03outflow"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"03"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Point"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="mf">-82.79192551924065</span><span class="p">,</span><span class="w">
+          </span><span class="mf">24.699718894664848</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"rel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alternate"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text/html"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This document as HTML"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://geoconnex.us/ref/hu02/03?f=html"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"rel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"collection"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HU02"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://reference.geoconnex.us/collections/hu02"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"rel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"prev"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://reference.geoconnex.us/collections/hu02/items/02?f=json"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div>
+<blockquote class="lang-specific json">
+  <p class="example-links">
+    <a target="_blank" href="https://ogcincubator.github.io/bblocks-hydro/build/tests/hydro/hyf/classes/hy_catchment/example_2_1.json">Open in new window</a>
+    <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fogcincubator.github.io%2Fbblocks-hydro%2Fbuild%2Ftests%2Fhydro%2Fhyf%2Fclasses%2Fhy_catchment%2Fexample_2_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-jsonld"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feature"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"featureType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HY_Basin"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hyf:HY_Basin"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"gnis_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://geoconnex.us/ref/hu02/03"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"gnis_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2730133</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"South Atlantic-Gulf Region"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"fid"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"loaddate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-07-17T15:44:28+00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"prev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"next"</span><span class="p">:</span><span class="w"> </span><span class="s2">"04"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"outflow"</span><span class="p">:</span><span class="w"> </span><span class="s2">"03outflow"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"03"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Point"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="mf">-82.79192551924065</span><span class="p">,</span><span class="w">
+      </span><span class="mf">24.699718894664848</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"rel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alternate"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text/html"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This document as HTML"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://geoconnex.us/ref/hu02/03?f=html"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"rel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"collection"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HU02"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://reference.geoconnex.us/collections/hu02"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"rel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"prev"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://reference.geoconnex.us/collections/hu02/items/02?f=json"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/context.jsonld"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote class="lang-specific jsonld">
+  <p class="example-links">
+    <a target="_blank" href="https://ogcincubator.github.io/bblocks-hydro/build/tests/hydro/hyf/classes/hy_catchment/example_2_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fogcincubator.github.io%2Fbblocks-hydro%2Fbuild%2Ftests%2Fhydro%2Fhyf%2Fclasses%2Fhy_catchment%2Fexample_2_1.jsonld">View on JSON-LD Playground</a>
+</blockquote>
+<div class="highlight"><pre class="highlight turtle tab-turtle"><code><span class="kd">@prefix</span><span class="w"> </span><span class="nn">dct:</span><span class="w"> </span><span class="nl">&lt;http://purl.org/dc/terms/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">geojson:</span><span class="w"> </span><span class="nl">&lt;https://purl.org/geojson/vocab#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">hyf:</span><span class="w"> </span><span class="nl">&lt;https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">ns1:</span><span class="w"> </span><span class="nl">&lt;http://www.iana.org/assignments/&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">oa:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/ns/oa#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">rdf:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span><span class="kd">@prefix</span><span class="w"> </span><span class="nn">xsd:</span><span class="w"> </span><span class="nl">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+</span><span class="nl">&lt;file:///github/workspace/03&gt;</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">geojson:</span><span class="n">Feature,
+</span><span class="w">        </span><span class="nn">hyf:</span><span class="n">HY_Basin</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">rdfs:</span><span class="n">seeAlso</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nn">dct:</span><span class="n">type</span><span class="w"> </span><span class="s">"application/json"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">ns1:</span><span class="n">relation</span><span class="w"> </span><span class="nl">&lt;http://www.iana.org/assignments/relation/prev&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">oa:</span><span class="n">hasTarget</span><span class="w"> </span><span class="nl">&lt;https://reference.geoconnex.us/collections/hu02/items/02?f=json&gt;</span><span class="w"> </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w"> </span><span class="nn">rdfs:</span><span class="n">label</span><span class="w"> </span><span class="s">"This document as HTML"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">dct:</span><span class="n">type</span><span class="w"> </span><span class="s">"text/html"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">ns1:</span><span class="n">relation</span><span class="w"> </span><span class="nl">&lt;http://www.iana.org/assignments/relation/alternate&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">oa:</span><span class="n">hasTarget</span><span class="w"> </span><span class="nl">&lt;https://geoconnex.us/ref/hu02/03?f=html&gt;</span><span class="w"> </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w"> </span><span class="nn">rdfs:</span><span class="n">label</span><span class="w"> </span><span class="s">"HU02"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">dct:</span><span class="n">type</span><span class="w"> </span><span class="s">"application/json"</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">ns1:</span><span class="n">relation</span><span class="w"> </span><span class="nl">&lt;http://www.iana.org/assignments/relation/collection&gt;</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">oa:</span><span class="n">hasTarget</span><span class="w"> </span><span class="nl">&lt;https://reference.geoconnex.us/collections/hu02&gt;</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">geojson:</span><span class="n">geometry</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="k">a</span><span class="w"> </span><span class="nn">geojson:</span><span class="n">Point</span><span class="w"> </span><span class="p">;</span><span class="w">
+            </span><span class="nn">geojson:</span><span class="n">coordinates</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="mf">-8.2</span><span class="mi">79193</span><span class="n">e+01</span><span class="w"> </span><span class="mf">2.4</span><span class="mi">69972</span><span class="n">e+01</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">;</span><span class="w">
+    </span><span class="nn">hyf:</span><span class="n">upstreamBasin</span><span class="w"> </span><span class="nl">&lt;file:///github/workspace/02&gt;</span><span class="w"> </span><span class="p">.</span><span class="w">
+
+
+</span></code></pre></div>
+<blockquote class="lang-specific turtle">
+  <p class="example-links">
+    <a target="_blank" href="https://ogcincubator.github.io/bblocks-hydro/build/tests/hydro/hyf/classes/hy_catchment/example_2_1.ttl">Open in new window</a>
 </blockquote>
 <h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">$schema</span><span class="pi">:</span> <span class="s">https://json-schema.org/draft/2020-12/schema</span>
 <span class="na">description</span><span class="pi">:</span> <span class="s">HY_Basin Feature</span>

@@ -1,10 +1,10 @@
 Validation report for ogc.hydro.hyf.classes.hy_catchment - HY_Basin
-Generated 2024-06-18T18:48:42.835269+00:00
+Generated 2024-06-18T18:48:42.841035+00:00
 === Files ===
-Using example_1_1.json from examples
+Using example_2_1.json from examples
 JSON-LD context is present - uplifting
-Output JSON-LD example_1_1.jsonld created
-Output Turtle example_1_1.ttl created
+Output JSON-LD example_2_1.jsonld created
+Output Turtle example_2_1.ttl created
 === End Files ===
 
 === JSON Schema ===
@@ -31,6 +31,7 @@ On instance['properties']:
      'loaddate': '2018-07-17T15:44:28+00:00',
      'name': 'South Atlantic-Gulf Region',
      'next': '04',
+     'outflow': '03outflow',
      'prev': '02',
      'uri': 'https://geoconnex.us/ref/hu02/03'}
 === End JSON Schema ===

@@ -106,7 +106,7 @@
   "name": "Building Blocks - Hydrology building blocks",
   "abstract": "Reusable building blocks for Hydrology from the OGC Hydro Domain WG\n",
   "description": "Features from HY_Features model\n",
-  "modified": "2024-06-18T18:33:18.698517",
+  "modified": "2024-06-18T18:48:41.448627",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"6badef16348eb4c240d1a1e4389d783ba62b56b9",
@@ -203,8 +203,8 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
-        "ogc.hydro.hyf.model",
-        "ogc.geo.features.feature"
+        "ogc.geo.features.feature",
+        "ogc.hydro.hyf.model"
       ],
       "tags": [
         "feature",

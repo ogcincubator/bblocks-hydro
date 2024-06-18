@@ -41,9 +41,9 @@ The model schema is wrapped in a FG-JSON feature schema.
   },
   "id": "03",
   "geometry": {
-    "type": "Polygon",
+    "type": "MultiPolygon",
     "coordinates": [
-
+      [
         [
           -82.79192551924065,
           24.699718894664848
@@ -60,7 +60,7 @@ The model schema is wrapped in a FG-JSON feature schema.
           -82.79192551924065,
           24.699718894664848
         ]
-      
+      ]
     ]
 
   },
@@ -106,23 +106,25 @@ The model schema is wrapped in a FG-JSON feature schema.
   },
   "id": "03",
   "geometry": {
-    "type": "Polygon",
+    "type": "MultiPolygon",
     "coordinates": [
       [
-        -82.79192551924065,
-        24.699718894664848
-      ],
-      [
-        -82.75341358941488,
-        24.668448982060728
-      ],
-      [
-        -82.75066457497482,
-        24.65974178394976
-      ],
-      [
-        -82.79192551924065,
-        24.699718894664848
+        [
+          -82.79192551924065,
+          24.699718894664848
+        ],
+        [
+          -82.75341358941488,
+          24.668448982060728
+        ],
+        [
+          -82.75066457497482,
+          24.65974178394976
+        ],
+        [
+          -82.79192551924065,
+          24.699718894664848
+        ]
       ]
     ]
   },
@@ -162,20 +164,152 @@ The model schema is wrapped in a FG-JSON feature schema.
 
 <http://example.com/features/03> a geojson:Feature,
         hyf:HY_Basin ;
-    rdfs:seeAlso [ rdfs:label "HU02" ;
+    rdfs:seeAlso [ dcterms:type "application/json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/prev> ;
+            oa:hasTarget <https://reference.geoconnex.us/collections/hu02/items/02?f=json> ],
+        [ rdfs:label "HU02" ;
             dcterms:type "application/json" ;
             ns1:relation <http://www.iana.org/assignments/relation/collection> ;
             oa:hasTarget <https://reference.geoconnex.us/collections/hu02> ],
         [ rdfs:label "This document as HTML" ;
             dcterms:type "text/html" ;
             ns1:relation <http://www.iana.org/assignments/relation/alternate> ;
-            oa:hasTarget <https://geoconnex.us/ref/hu02/03?f=html> ],
-        [ dcterms:type "application/json" ;
-            ns1:relation <http://www.iana.org/assignments/relation/prev> ;
-            oa:hasTarget <https://reference.geoconnex.us/collections/hu02/items/02?f=json> ] ;
-    geojson:geometry [ a geojson:Polygon ;
-            geojson:coordinates ( ( -8.279193e+01 2.469972e+01 ) ( -8.275341e+01 2.466845e+01 ) ( -8.275066e+01 2.465974e+01 ) ( -8.279193e+01 2.469972e+01 ) ) ] ;
+            oa:hasTarget <https://geoconnex.us/ref/hu02/03?f=html> ] ;
+    geojson:geometry [ a geojson:MultiPolygon ;
+            geojson:coordinates ( ( ( -8.279193e+01 2.469972e+01 ) ( -8.275341e+01 2.466845e+01 ) ( -8.275066e+01 2.465974e+01 ) ( -8.279193e+01 2.469972e+01 ) ) ) ] ;
     hyf:upstreamBasin <http://example.com/features/02> .
+
+
+```
+
+
+### Basin as node point.
+#### json
+```json
+{
+  "type": "Feature",
+
+  "featureType": "HY_Basin",
+  "properties": {
+      "@type": "hyf:HY_Basin",
+    "gnis_url": "https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133",
+    "uri": "https://geoconnex.us/ref/hu02/03",
+    "gnis_id": 2730133,
+    "name": "South Atlantic-Gulf Region",
+    "fid": 15,
+    "loaddate": "2018-07-17T15:44:28+00:00",
+    "prev": "02",
+    "next": "04",
+    "outflow": "03outflow"
+  },
+  "id": "03",
+  "geometry": {
+    "type": "Point",
+    "coordinates":
+        [
+          -82.79192551924065,
+          24.699718894664848
+        ]
+  },
+  "links": [
+
+    {
+      "rel": "alternate",
+      "type": "text/html",
+      "title": "This document as HTML",
+      "href": "https://geoconnex.us/ref/hu02/03?f=html"
+    },
+    {
+      "rel": "collection",
+      "type": "application/json",
+      "title": "HU02",
+      "href": "https://reference.geoconnex.us/collections/hu02"
+    },
+    {
+      "rel": "prev",
+      "type": "application/json",
+      "href": "https://reference.geoconnex.us/collections/hu02/items/02?f=json"
+    }
+  ]
+}
+
+```
+
+#### jsonld
+```jsonld
+{
+  "type": "Feature",
+  "featureType": "HY_Basin",
+  "properties": {
+    "@type": "hyf:HY_Basin",
+    "gnis_url": "https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133",
+    "uri": "https://geoconnex.us/ref/hu02/03",
+    "gnis_id": 2730133,
+    "name": "South Atlantic-Gulf Region",
+    "fid": 15,
+    "loaddate": "2018-07-17T15:44:28+00:00",
+    "prev": "02",
+    "next": "04",
+    "outflow": "03outflow"
+  },
+  "id": "03",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -82.79192551924065,
+      24.699718894664848
+    ]
+  },
+  "links": [
+    {
+      "rel": "alternate",
+      "type": "text/html",
+      "title": "This document as HTML",
+      "href": "https://geoconnex.us/ref/hu02/03?f=html"
+    },
+    {
+      "rel": "collection",
+      "type": "application/json",
+      "title": "HU02",
+      "href": "https://reference.geoconnex.us/collections/hu02"
+    },
+    {
+      "rel": "prev",
+      "type": "application/json",
+      "href": "https://reference.geoconnex.us/collections/hu02/items/02?f=json"
+    }
+  ],
+  "@context": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/context.jsonld"
+}
+```
+
+#### ttl
+```ttl
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix hyf: <https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/> .
+@prefix ns1: <http://www.iana.org/assignments/> .
+@prefix oa: <http://www.w3.org/ns/oa#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<file:///github/workspace/03> a geojson:Feature,
+        hyf:HY_Basin ;
+    rdfs:seeAlso [ dct:type "application/json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/prev> ;
+            oa:hasTarget <https://reference.geoconnex.us/collections/hu02/items/02?f=json> ],
+        [ rdfs:label "This document as HTML" ;
+            dct:type "text/html" ;
+            ns1:relation <http://www.iana.org/assignments/relation/alternate> ;
+            oa:hasTarget <https://geoconnex.us/ref/hu02/03?f=html> ],
+        [ rdfs:label "HU02" ;
+            dct:type "application/json" ;
+            ns1:relation <http://www.iana.org/assignments/relation/collection> ;
+            oa:hasTarget <https://reference.geoconnex.us/collections/hu02> ] ;
+    geojson:geometry [ a geojson:Point ;
+            geojson:coordinates ( -8.279193e+01 2.469972e+01 ) ] ;
+    hyf:upstreamBasin <file:///github/workspace/02> .
 
 
 ```

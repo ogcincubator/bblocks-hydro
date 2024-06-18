@@ -13,12 +13,12 @@
     rdfs:label "HY_Basin" ;
     dct:abstract "HY Feature example - HY_Basin" ;
     dct:created "2023-05-19T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-hydro/bblock/ogc.hydro.hyf.classes.hy_catchment" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-hydro/build/generateddocs/markdown/hydro/hyf/classes/hy_catchment/index.md" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-hydro/build/generateddocs/slate-build/hydro/hyf/classes/hy_catchment/" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-hydro/bblock/ogc.hydro.hyf.classes.hy_catchment" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-hydro/build/generateddocs/json-full/hydro/hyf/classes/hy_catchment/index.json" ] ;
     dct:hasVersion "1.0" ;
@@ -44,10 +44,10 @@
     dct:created "2023-05-19T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-hydro/build/generateddocs/slate-build/hydro/hyf/model/" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-hydro/build/generateddocs/json-full/hydro/hyf/model/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-hydro/bblock/ogc.hydro.hyf.model" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-hydro/build/generateddocs/json-full/hydro/hyf/model/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-hydro/build/generateddocs/markdown/hydro/hyf/model/index.md" ] ;
     dct:hasVersion "1.0" ;
@@ -75,15 +75,15 @@
     bblocks:imports <https://opengeospatial.github.io/bblocks/register.json> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-06-18T18:33:22.692070"^^xsd:dateTime ;
-    prov:startedAtTime "2024-06-18T18:33:22.632995"^^xsd:dateTime ;
+    prov:endedAtTime "2024-06-18T18:48:42.912291"^^xsd:dateTime ;
+    prov:startedAtTime "2024-06-18T18:48:42.854570"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/json" ;
-            dct:hasVersion "git:08089a466e1a3f80b81b5a51bc9fe70b9c4cf219" ;
-            rdfs:seeAlso <https://ogcincubator.github.io/bblocks-hydro/build/register.json> ],
-        [ a prov:Entity ;
             dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
+        [ a prov:Entity ;
+            dct:format "application/json" ;
+            dct:hasVersion "git:72481e22d4d85d7f1ebf67899b0f945dff865d78" ;
+            rdfs:seeAlso <https://ogcincubator.github.io/bblocks-hydro/build/register.json> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
