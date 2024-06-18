@@ -86,6 +86,74 @@ The model schema is wrapped in a FG-JSON feature schema.
 
 ```
 
+#### jsonld
+```jsonld
+{
+  "type": "Feature",
+  "featureType": "HY_Basin",
+  "properties": {
+    "gnis_url": "https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133",
+    "uri": "https://geoconnex.us/ref/hu02/03",
+    "gnis_id": 2730133,
+    "name": "South Atlantic-Gulf Region",
+    "fid": 15,
+    "loaddate": "2018-07-17T15:44:28+00:00",
+    "prev": "02",
+    "next": "04"
+  },
+  "id": "03",
+  "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          -82.79192551924065,
+          24.699718894664848
+        ],
+        [
+          -82.75341358941488,
+          24.668448982060728
+        ],
+        [
+          -82.75066457497482,
+          24.65974178394976
+        ],
+        [
+          -82.79192551924065,
+          24.699718894664848
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "alternate",
+      "type": "text/html",
+      "title": "This document as HTML",
+      "href": "https://geoconnex.us/ref/hu02/03?f=html"
+    },
+    {
+      "rel": "collection",
+      "type": "application/json",
+      "title": "HU02",
+      "href": "https://reference.geoconnex.us/collections/hu02"
+    },
+    {
+      "rel": "prev",
+      "type": "application/json",
+      "href": "https://reference.geoconnex.us/collections/hu02/items/02?f=json"
+    }
+  ],
+  "@context": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/context.jsonld"
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 ## Schema
 
 ```yaml
@@ -107,6 +175,8 @@ $defs:
                 type: string
                 format: uri
               uniqueItems: true
+              x-jsonld-type: '@id'
+              x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin
             code:
               type: string
             inflowNode:
@@ -615,6 +685,15 @@ $defs:
             outfall:
               type: string
               format: uri
+x-jsonld-extra-terms:
+  prev:
+    x-jsonld-type: '@id'
+    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin
+  hyf:upstreamBasin:
+    x-jsonld-type: '@id'
+    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin
+x-jsonld-prefixes:
+  hyf: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/
 
 ```
 
@@ -627,11 +706,24 @@ Links to the schema:
 # JSON-LD Context
 
 ```jsonld
-None
+{
+  "@context": {
+    "prev": {
+      "@type": "@id",
+      "@id": "hyf:upstreamBasin"
+    },
+    "hyf:upstreamBasin": {
+      "@type": "@id",
+      "@id": "hyf:upstreamBasin"
+    },
+    "hyf": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/",
+    "@version": 1.1
+  }
+}
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](/github/workspace/_sources/hy_catchment/context.jsonld)
+[context.jsonld](https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/context.jsonld)
 
 ## Sources
 

@@ -294,7 +294,7 @@
     </script>
   </head>
 
-  <body class="hydro hydro_hy_catchment hydro_hy_catchment_index" data-languages="[]">
+  <body class="hydro hydro_hy_catchment hydro_hy_catchment_index" data-languages="[&quot;json&quot;,&quot;jsonld&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -303,6 +303,10 @@
     </a>
     <div class="toc-wrapper">
       <img src="../../images/logo-4d9dfd05.svg" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="json">JSON</a>
+              <a href="#" data-language-name="jsonld">JSON-LD</a>
+        </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
@@ -357,8 +361,8 @@
     <a href="http://www.opengis.net/def/status/under-development" target="_blank" data-rainbow-uri>Under development</a>
 </p>
 
-<aside class="success">
-This building block is <strong><a href="https://github.com/ogcincubator/bblocks-hydro/blob/master/build/tests/hydro/hy_catchment/" target="_blank">valid</a></strong>
+<aside class="warning">
+Validation for this building block has <strong><a href="https://github.com/ogcincubator/bblocks-hydro/blob/master/build/tests/hydro/hy_catchment/" target="_blank">failed</a></strong>
 </aside>
 <h1 id='description'>Description</h1><h2 id='hy_basin'>HY_Basin</h2>
 <p>A Building Block for a typical Class - HY_Basin</p>
@@ -432,6 +436,70 @@ This building block is <strong><a href="https://github.com/ogcincubator/bblocks-
     <a target="_blank" href="https://ogcincubator.github.io/bblocks-hydro/build/tests/hydro/hy_catchment/example_1_1.json">Open in new window</a>
     <a target="_blank" href="https://avillar.github.io/TreedocViewer/?dataParser=json&amp;dataUrl=https%3A%2F%2Fogcincubator.github.io%2Fbblocks-hydro%2Fbuild%2Ftests%2Fhydro%2Fhy_catchment%2Fexample_1_1.json&amp;expand=2&amp;option=%7B%22showTable%22%3A+false%7D">View on JSON Viewer</a></p>
 </blockquote>
+<div class="highlight"><pre class="highlight json tab-jsonld"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Feature"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"featureType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HY_Basin"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"properties"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"gnis_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"uri"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://geoconnex.us/ref/hu02/03"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"gnis_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2730133</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"South Atlantic-Gulf Region"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"fid"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"loaddate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-07-17T15:44:28+00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"prev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"02"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"next"</span><span class="p">:</span><span class="w"> </span><span class="s2">"04"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"03"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"geometry"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MultiPolygon"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">[</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="mf">-82.79192551924065</span><span class="p">,</span><span class="w">
+          </span><span class="mf">24.699718894664848</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="mf">-82.75341358941488</span><span class="p">,</span><span class="w">
+          </span><span class="mf">24.668448982060728</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="mf">-82.75066457497482</span><span class="p">,</span><span class="w">
+          </span><span class="mf">24.65974178394976</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+          </span><span class="mf">-82.79192551924065</span><span class="p">,</span><span class="w">
+          </span><span class="mf">24.699718894664848</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"links"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"rel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alternate"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"text/html"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"This document as HTML"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://geoconnex.us/ref/hu02/03?f=html"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"rel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"collection"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HU02"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://reference.geoconnex.us/collections/hu02"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"rel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"prev"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"application/json"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://reference.geoconnex.us/collections/hu02/items/02?f=json"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/context.jsonld"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<blockquote class="lang-specific jsonld">
+  <p class="example-links">
+    <a target="_blank" href="https://ogcincubator.github.io/bblocks-hydro/build/tests/hydro/hy_catchment/example_1_1.jsonld">Open in new window</a>
+    <a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fogcincubator.github.io%2Fbblocks-hydro%2Fbuild%2Ftests%2Fhydro%2Fhy_catchment%2Fexample_1_1.jsonld">View on JSON-LD Playground</a>
+</blockquote>
 <h1 id='json-schema'>JSON Schema</h1><div class="highlight"><pre class="highlight yaml tab-yaml--schema"><code><span class="na">$schema</span><span class="pi">:</span> <span class="s">https://json-schema.org/draft/2019-09/schema</span>
 <span class="na">$id</span><span class="pi">:</span> <span class="s">https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature.json</span>
 <span class="na">$defs</span><span class="pi">:</span>
@@ -450,6 +518,8 @@ This building block is <strong><a href="https://github.com/ogcincubator/bblocks-
                 <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
                 <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
               <span class="na">uniqueItems</span><span class="pi">:</span> <span class="no">true</span>
+              <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
+              <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin</span>
             <span class="na">code</span><span class="pi">:</span>
               <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
             <span class="na">inflowNode</span><span class="pi">:</span>
@@ -958,6 +1028,15 @@ This building block is <strong><a href="https://github.com/ogcincubator/bblocks-
             <span class="na">outfall</span><span class="pi">:</span>
               <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
               <span class="na">format</span><span class="pi">:</span> <span class="s">uri</span>
+<span class="na">x-jsonld-extra-terms</span><span class="pi">:</span>
+  <span class="na">prev</span><span class="pi">:</span>
+    <span class="na">x-jsonld-type</span><span class="pi">:</span> <span class="s1">'</span><span class="s">@id'</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin</span>
+  <span class="s">hyf:upstreamBasin:</span>
+    <span class="s">x-jsonld-type</span><span class="err">:</span> <span class="s1">'</span><span class="s">@id'</span>
+    <span class="na">x-jsonld-id</span><span class="pi">:</span> <span class="s">https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin</span>
+<span class="na">x-jsonld-prefixes</span><span class="pi">:</span>
+  <span class="na">hyf</span><span class="pi">:</span> <span class="s">https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/</span>
 
 </code></pre></div>
 <blockquote>
@@ -970,14 +1049,27 @@ This building block is <strong><a href="https://github.com/ogcincubator/bblocks-
 <li>YAML version: <a href="https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema.yaml" target="_blank">https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema.yaml</a></li>
 <li>JSON version: <a href="https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema.json" target="_blank">https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema.json</a></li>
 </ul>
-<h1 id='json-ld-context'>JSON-LD Context</h1><div class="highlight"><pre class="highlight json tab-json--ldContext"><code><span class="err">None</span><span class="w">
+<h1 id='json-ld-context'>JSON-LD Context</h1><div class="highlight"><pre class="highlight json tab-json--ldContext"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"@context"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"prev"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hyf:upstreamBasin"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"hyf:upstreamBasin"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@id"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"@id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hyf:upstreamBasin"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"hyf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"@version"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.1</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <blockquote>
-<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=%2Fgithub%2Fworkspace%2F_sources%2Fhy_catchment%2Fcontext.jsonld">View on JSON-LD Playground</a></p>
+<p><a target="_blank" href="https://json-ld.org/playground/#json-ld=https%3A%2F%2Fogcincubator.github.io%2Fbblocks-hydro%2Fbuild%2Fannotated%2Fhydro%2Fhy_catchment%2Fcontext.jsonld">View on JSON-LD Playground</a></p>
 </blockquote>
 
 <p>You can find the full JSON-LD context here:
-<a href="/github/workspace/_sources/hy_catchment/context.jsonld" target="_blank">/github/workspace/_sources/hy_catchment/context.jsonld</a></p>
+<a href="https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/context.jsonld" target="_blank">https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/context.jsonld</a></p>
 <h1 id='references'>References</h1>
 <ul>
 <li><a href="https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7">OGC API - Features, Part 1, 7.16.2: Feature Response</a></li>
@@ -993,6 +1085,10 @@ This building block is <strong><a href="https://github.com/ogcincubator/bblocks-
 
       </div>
       <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="json">JSON</a>
+                <a href="#" data-language-name="jsonld">JSON-LD</a>
+          </div>
       </div>
     </div>
   </body>

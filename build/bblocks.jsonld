@@ -106,7 +106,7 @@
   "name": "Building Blocks - Hydrology building blocks",
   "abstract": "Reusable building blocks for Hydrology from the OGC Hydro Domain WG\n",
   "description": "Features from HY_Features model\n",
-  "modified": "2024-06-18T17:34:09.493304",
+  "modified": "2024-06-18T17:55:34.531969",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"6badef16348eb4c240d1a1e4389d783ba62b56b9",
@@ -153,7 +153,7 @@
       ],
       "group": "Examples",
       "shaclRules": {},
-      "ldContext": "/github/workspace/_sources/hy_catchment/context.jsonld",
+      "ldContext": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/context.jsonld",
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema.yaml",
         "application/json": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema.json"
@@ -161,7 +161,7 @@
       "sourceSchema": "https://ogcincubator.github.io/bblocks-hydro/_sources/hy_catchment/schema.json",
       "sourceLdContext": "https://ogcincubator.github.io/bblocks-hydro/_sources/hy_catchment/context.jsonld",
       "sourceFiles": "https://ogcincubator.github.io/bblocks-hydro/_sources/hy_catchment/",
-      "validationPassed": true,
+      "validationPassed": false,
       "testOutputs": "https://github.com/ogcincubator/bblocks-hydro/blob/master/build/tests/hydro/hy_catchment/",
       "documentation": {
         "markdown": {

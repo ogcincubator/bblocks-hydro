@@ -13,21 +13,21 @@
     rdfs:label "HY_Basin" ;
     dct:abstract "HY Feature example - HY_Basin" ;
     dct:created "2023-05-19T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-hydro/bblock/ogc.hydro.hy_catchment" ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-hydro/build/generateddocs/markdown/hydro/hy_catchment/index.md" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-hydro/build/generateddocs/slate-build/hydro/hy_catchment/" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-hydro/build/generateddocs/json-full/hydro/hy_catchment/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-hydro/build/generateddocs/markdown/hydro/hy_catchment/index.md" ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-hydro/bblock/ogc.hydro.hy_catchment" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2024-06-18"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7> ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-hydro/> ;
     dcat:keyword "examples",
         "feature" ;
-    bblocks:hasJsonLdContext <https://ogcincubator.github.io/github/workspace/_sources/hy_catchment/context.jsonld> ;
+    bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/context.jsonld> ;
     bblocks:hasSchema <https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema.json>,
         <https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema.yaml> ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-hydro/_sources/hy_catchment/context.jsonld> ;
@@ -48,15 +48,15 @@
     bblocks:imports <https://opengeospatial.github.io/bblocks/register.json> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-06-18T17:34:10.921930"^^xsd:dateTime ;
-    prov:startedAtTime "2024-06-18T17:34:10.864127"^^xsd:dateTime ;
+    prov:endedAtTime "2024-06-18T17:55:35.240100"^^xsd:dateTime ;
+    prov:startedAtTime "2024-06-18T17:55:35.183713"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-        [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:9f3ed0a231bc930c63dd1b3bde3bd06d8a9a963a" ;
-            rdfs:seeAlso <https://ogcincubator.github.io/bblocks-hydro/build/register.json> ] ;
+            dct:hasVersion "git:c61f0de123bb2c99fd485caf0bd0e029ce950d14" ;
+            rdfs:seeAlso <https://ogcincubator.github.io/bblocks-hydro/build/register.json> ],
+        [ a prov:Entity ;
+            dct:format "application/yaml" ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
