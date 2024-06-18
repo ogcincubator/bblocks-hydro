@@ -1,7 +1,7 @@
 {
   "@context": [
     {
-      "@base": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master"
+      "@base": "https://ogcincubator.github.io/bblocks-hydro"
     },
     {
       "bblocks": "https://www.opengis.net/def/bblocks/",
@@ -106,7 +106,7 @@
   "name": "Building Blocks - Hydrology building blocks",
   "abstract": "Reusable building blocks for Hydrology from the OGC Hydro Domain WG\n",
   "description": "Features from HY_Features model\n",
-  "modified": "2024-06-18T17:32:24.879829",
+  "modified": "2024-06-18T17:34:09.493304",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"6badef16348eb4c240d1a1e4389d783ba62b56b9",
@@ -116,9 +116,9 @@
   },
   "gitRepository": "https://github.com/ogcincubator/bblocks-hydro",
   "gitHubRepository": "https://github.com/ogcincubator/bblocks-hydro/blob/master/",
-  "baseURL": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/",
-  "viewerURL": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/",
-  "validationReport": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/tests/report.html",
+  "baseURL": "https://ogcincubator.github.io/bblocks-hydro/",
+  "viewerURL": "https://ogcincubator.github.io/bblocks-hydro/",
+  "validationReport": "https://ogcincubator.github.io/bblocks-hydro/build/tests/report.html",
   "imports": [
     "https://opengeospatial.github.io/bblocks/register.json"
   ],
@@ -153,30 +153,32 @@
       ],
       "group": "Examples",
       "shaclRules": {},
+      "ldContext": "/github/workspace/_sources/hy_catchment/context.jsonld",
       "schema": {
-        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema.yaml",
-        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema.json"
       },
-      "sourceSchema": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/_sources/hy_catchment/schema.json",
-      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/_sources/hy_catchment/",
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-hydro/_sources/hy_catchment/schema.json",
+      "sourceLdContext": "https://ogcincubator.github.io/bblocks-hydro/_sources/hy_catchment/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-hydro/_sources/hy_catchment/",
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/bblocks-hydro/blob/master/build/tests/hydro/hy_catchment/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/generateddocs/markdown/hydro/hy_catchment/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-hydro/build/generateddocs/markdown/hydro/hy_catchment/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/generateddocs/json-full/hydro/hy_catchment/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-hydro/build/generateddocs/json-full/hydro/hy_catchment/index.json"
         },
         "slate": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/generateddocs/slate-build/hydro/hy_catchment/"
+          "url": "https://ogcincubator.github.io/bblocks-hydro/build/generateddocs/slate-build/hydro/hy_catchment/"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/bblock/ogc.hydro.hy_catchment"
+          "url": "https://ogcincubator.github.io/bblocks-hydro/bblock/ogc.hydro.hy_catchment"
         }
       },
       "@type": [

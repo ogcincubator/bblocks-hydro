@@ -25,12 +25,14 @@
   ],
   "group": "Examples",
   "shaclRules": {},
+  "ldContext": "/github/workspace/_sources/hy_catchment/context.jsonld",
   "schema": {
-    "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema.yaml",
-    "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema.json"
+    "application/yaml": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema.json"
   },
-  "sourceSchema": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/_sources/hy_catchment/schema.json",
-  "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/_sources/hy_catchment/",
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-hydro/_sources/hy_catchment/schema.json",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-hydro/_sources/hy_catchment/context.jsonld",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-hydro/_sources/hy_catchment/",
   "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/bblocks-hydro/blob/master/build/tests/hydro/hy_catchment/",
   "description": "## HY_Basin\n\n A Building Block for a typical Class - HY_Basin\n\nThe schema is derived directly from the UML model, and it linked to an ontology also derived from the UML model.\n\nThe model schema is wrapped in a FG-JSON feature schema.\n\n\n",
@@ -44,7 +46,7 @@
           "language": "json",
           "ref": "examples/hy_catchment.json",
           "code": "{\n  \"type\": \"Feature\",\n  \"featureType\": \"HY_Basin\",\n  \"properties\": {\n    \"gnis_url\": \"https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133\",\n    \"uri\": \"https://geoconnex.us/ref/hu02/03\",\n    \"gnis_id\": 2730133,\n    \"name\": \"South Atlantic-Gulf Region\",\n    \"fid\": 15,\n    \"loaddate\": \"2018-07-17T15:44:28+00:00\",\n    \"prev\": \"02\",\n    \"next\": \"04\"\n  },\n  \"id\": \"03\",\n  \"geometry\": {\n    \"type\": \"MultiPolygon\",\n    \"coordinates\": [\n      [\n        [\n          -82.79192551924065,\n          24.699718894664848\n        ],\n        [\n          -82.75341358941488,\n          24.668448982060728\n        ],\n        [\n          -82.75066457497482,\n          24.65974178394976\n        ],\n        [\n          -82.79192551924065,\n          24.699718894664848\n        ]\n      ]\n    ]\n\n  },\n  \"links\": [\n\n    {\n      \"rel\": \"alternate\",\n      \"type\": \"text/html\",\n      \"title\": \"This document as HTML\",\n      \"href\": \"https://geoconnex.us/ref/hu02/03?f=html\"\n    },\n    {\n      \"rel\": \"collection\",\n      \"type\": \"application/json\",\n      \"title\": \"HU02\",\n      \"href\": \"https://reference.geoconnex.us/collections/hu02\"\n    },\n    {\n      \"rel\": \"prev\",\n      \"type\": \"application/json\",\n      \"href\": \"https://reference.geoconnex.us/collections/hu02/items/02?f=json\"\n    }\n  ]\n}\n",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/tests/hydro/hy_catchment/example_1_1.json"
+          "url": "https://ogcincubator.github.io/bblocks-hydro/build/tests/hydro/hy_catchment/example_1_1.json"
         }
       ]
     }

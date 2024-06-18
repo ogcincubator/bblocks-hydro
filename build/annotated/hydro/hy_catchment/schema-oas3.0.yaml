@@ -27,7 +27,7 @@ $defs:
   HY_Basin:
     $anchor: HY_Basin
     allOf:
-    - $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_Catchment
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_Catchment
     - type: object
       properties:
         properties:
@@ -54,7 +54,7 @@ $defs:
   HY_BasinAggregate:
     $anchor: HY_BasinAggregate
     allOf:
-    - $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_Catchment
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_Catchment
     - type: object
       properties:
         properties:
@@ -74,7 +74,7 @@ $defs:
   HY_Catchment:
     $anchor: HY_Catchment
     allOf:
-    - $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_HydroFeature
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_HydroFeature
     - type: object
       properties:
         properties:
@@ -86,12 +86,12 @@ $defs:
   HY_CatchmentArea:
     $anchor: HY_CatchmentArea
     allOf:
-    - $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_CatchmentRepresentation
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_CatchmentRepresentation
     - type: object
   HY_CatchmentBoundary:
     $anchor: HY_CatchmentBoundary
     allOf:
-    - $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_CatchmentRepresentation
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_CatchmentRepresentation
     - type: object
   HY_CatchmentRepresentation:
     $anchor: HY_CatchmentRepresentation
@@ -158,12 +158,12 @@ $defs:
   HY_FlowPath:
     $anchor: HY_FlowPath
     allOf:
-    - $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_CatchmentRepresentation
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_CatchmentRepresentation
     - type: object
   HY_Glacier:
     $anchor: HY_Glacier
     allOf:
-    - $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_HydroFeature
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_HydroFeature
     - type: object
   HY_HydroFeature:
     $anchor: HY_HydroFeature
@@ -182,12 +182,12 @@ $defs:
           name:
             type: array
             items:
-              $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_HydroFeatureName
+              $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_HydroFeatureName
             uniqueItems: true
           context:
             type: array
             items:
-              $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_HydroFeatureContext
+              $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_HydroFeatureContext
             uniqueItems: true
         required:
         - '@type'
@@ -225,7 +225,7 @@ $defs:
   HY_HydrographicNetwork:
     $anchor: HY_HydrographicNetwork
     allOf:
-    - $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_Network
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_Network
     - type: object
   HY_IndirectPosition:
     $anchor: HY_IndirectPosition
@@ -294,7 +294,7 @@ $defs:
   HY_Network:
     $anchor: HY_Network
     allOf:
-    - $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_CatchmentRepresentation
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_CatchmentRepresentation
     - type: object
   HY_Outfall:
     $anchor: HY_Outfall
@@ -336,14 +336,14 @@ $defs:
     type: object
     properties:
       geometry:
-        $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/x-defs/Point
+        $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/x-defs/Point
       properties:
         type: object
         properties:
           '@type':
             type: string
           refPointType:
-            $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_RefPointType
+            $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_RefPointType
           networkLocation:
             type: string
             format: uri
@@ -361,7 +361,7 @@ $defs:
           '@type':
             type: string
           description:
-            $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_RelativePositionDescription
+            $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_RelativePositionDescription
           percentage:
             type: number
         required:
@@ -375,7 +375,7 @@ $defs:
   HY_Reservoir:
     $anchor: HY_Reservoir
     allOf:
-    - $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_HydroFeature
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_HydroFeature
     - type: object
   HY_RiverMileageCS:
     $anchor: HY_RiverMileageCS
@@ -401,7 +401,7 @@ $defs:
   HY_WaterBody:
     $anchor: HY_WaterBody
     allOf:
-    - $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_HydroFeature
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_HydroFeature
     - type: object
       properties:
         properties:
@@ -417,7 +417,7 @@ $defs:
   HY_WaterBodySegment:
     $anchor: HY_WaterBodySegment
     allOf:
-    - $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_HydroFeature
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_HydroFeature
     - type: object
       properties:
         properties:
@@ -538,7 +538,7 @@ $defs:
   HY_Watershed:
     $anchor: HY_Watershed
     allOf:
-    - $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_CatchmentBoundary
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_CatchmentBoundary
     - type: object
       properties:
         properties:

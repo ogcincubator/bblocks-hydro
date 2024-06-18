@@ -620,8 +620,18 @@ $defs:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema.json)
-* JSON version: [schema.json](https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema.yaml)
+* YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema.json)
+* JSON version: [schema.json](https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema.yaml)
+
+
+# JSON-LD Context
+
+```jsonld
+None
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](/github/workspace/_sources/hy_catchment/context.jsonld)
 
 ## Sources
 

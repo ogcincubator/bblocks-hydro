@@ -39,7 +39,7 @@
       "$anchor": "HY_Basin",
       "allOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_Catchment"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_Catchment"
         },
         {
           "type": "object",
@@ -82,7 +82,7 @@
       "$anchor": "HY_BasinAggregate",
       "allOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_Catchment"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_Catchment"
         },
         {
           "type": "object",
@@ -115,7 +115,7 @@
       "$anchor": "HY_Catchment",
       "allOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_HydroFeature"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_HydroFeature"
         },
         {
           "type": "object",
@@ -137,7 +137,7 @@
       "$anchor": "HY_CatchmentArea",
       "allOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_CatchmentRepresentation"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_CatchmentRepresentation"
         },
         {
           "type": "object"
@@ -148,7 +148,7 @@
       "$anchor": "HY_CatchmentBoundary",
       "allOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_CatchmentRepresentation"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_CatchmentRepresentation"
         },
         {
           "type": "object"
@@ -250,7 +250,7 @@
       "$anchor": "HY_FlowPath",
       "allOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_CatchmentRepresentation"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_CatchmentRepresentation"
         },
         {
           "type": "object"
@@ -261,7 +261,7 @@
       "$anchor": "HY_Glacier",
       "allOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_HydroFeature"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_HydroFeature"
         },
         {
           "type": "object"
@@ -288,14 +288,14 @@
             "name": {
               "type": "array",
               "items": {
-                "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_HydroFeatureName"
+                "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_HydroFeatureName"
               },
               "uniqueItems": true
             },
             "context": {
               "type": "array",
               "items": {
-                "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_HydroFeatureContext"
+                "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_HydroFeatureContext"
               },
               "uniqueItems": true
             }
@@ -354,7 +354,7 @@
       "$anchor": "HY_HydrographicNetwork",
       "allOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_Network"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_Network"
         },
         {
           "type": "object"
@@ -458,7 +458,7 @@
       "$anchor": "HY_Network",
       "allOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_CatchmentRepresentation"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_CatchmentRepresentation"
         },
         {
           "type": "object"
@@ -518,7 +518,7 @@
       "type": "object",
       "properties": {
         "geometry": {
-          "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/x-defs/Point"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/x-defs/Point"
         },
         "properties": {
           "type": "object",
@@ -527,7 +527,7 @@
               "type": "string"
             },
             "refPointType": {
-              "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_RefPointType"
+              "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_RefPointType"
             },
             "networkLocation": {
               "type": "string",
@@ -554,7 +554,7 @@
               "type": "string"
             },
             "description": {
-              "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_RelativePositionDescription"
+              "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_RelativePositionDescription"
             },
             "percentage": {
               "type": "number"
@@ -578,7 +578,7 @@
       "$anchor": "HY_Reservoir",
       "allOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_HydroFeature"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_HydroFeature"
         },
         {
           "type": "object"
@@ -619,7 +619,7 @@
       "$anchor": "HY_WaterBody",
       "allOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_HydroFeature"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_HydroFeature"
         },
         {
           "type": "object",
@@ -647,7 +647,7 @@
       "$anchor": "HY_WaterBodySegment",
       "allOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_HydroFeature"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_HydroFeature"
         },
         {
           "type": "object",
@@ -823,7 +823,7 @@
       "$anchor": "HY_Watershed",
       "allOf": [
         {
-          "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_CatchmentBoundary"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.json#/$defs/HY_CatchmentBoundary"
         },
         {
           "type": "object",

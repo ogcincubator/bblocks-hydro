@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.hydro.hy_catchment - HY_Basin",
   "bblockName": "HY_Basin",
   "bblockId": "ogc.hydro.hy_catchment",
-  "generated": "2024-06-18T17:32:25.515988+00:00",
+  "generated": "2024-06-18T17:34:10.851709+00:00",
   "result": true,
   "items": [
     {
@@ -10,7 +10,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/hydro/hy_catchment/example_1_1.json",
-        "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-hydro/master/build/tests/hydro/hy_catchment/example_1_1.json",
+        "url": "https://ogcincubator.github.io/bblocks-hydro/build/tests/hydro/hy_catchment/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "json"
