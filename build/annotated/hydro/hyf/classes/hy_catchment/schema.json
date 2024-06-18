@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "HY_Basin Feature",
+  "allOf": [
+    {
+      "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema.json#/$defs/HY_Basin"
+    },
+    {
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.json"
+    }
+  ],
+  "x-jsonld-extra-terms": {
+    "prev": {
+      "x-jsonld-type": "@id",
+      "x-jsonld-id": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin"
+    },
+    "upstreamBasin": {
+      "x-jsonld-type": "@id",
+      "x-jsonld-id": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin"
+    },
+    "hyf:upstreamBasin": {
+      "x-jsonld-type": "@id",
+      "x-jsonld-id": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin"
+    }
+  },
+  "x-jsonld-prefixes": {
+    "hyf": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/"
+  }
+}

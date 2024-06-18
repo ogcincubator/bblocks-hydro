@@ -1,0 +1,70 @@
+
+
+{
+  "itemIdentifier": "ogc.hydro.hyf.classes.hy_catchment",
+  "name": "HY_Basin",
+  "abstract": "HY Feature example - HY_Basin",
+  "status": "under-development",
+  "dateTimeAddition": "2023-05-19T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-examples",
+  "version": "1.0",
+  "dateOfLastChange": "2024-06-18",
+  "sources": [
+    {
+      "title": "OGC API - Features, Part 1, 7.16.2: Feature Response",
+      "link": "https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "dependsOn": [
+    "ogc.geo.features.feature",
+    "ogc.hydro.hyf.model"
+  ],
+  "tags": [
+    "feature",
+    "examples"
+  ],
+  "group": "Examples",
+  "shaclRules": {},
+  "ldContext": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-hydro/_sources/classes/hy_catchment/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-hydro/_sources/classes/hy_catchment/context.jsonld",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-hydro/_sources/classes/hy_catchment/",
+  "validationPassed": false,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-hydro/blob/master/build/tests/hydro/hyf/classes/hy_catchment/",
+  "description": "## HY_Basin\n\n A Building Block for a typical Class - HY_Basin\n\nThe schema is derived directly from the UML model, and it linked to an ontology also derived from the UML model.\n\nThe model schema is wrapped in a FG-JSON feature schema.\n\n\n",
+  "examples": [
+    {
+      "title": "GeoJSON - specialisation example.",
+      "comment": "This examples shows how to define a customised schema based on an existing building block - in this case the OGC API Features basic GeoJSON Feature response",
+      "base-uri": "http://example.com/features/",
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/hy_catchment.json",
+          "code": "{\n  \"type\": \"Feature\",\n  \"featureType\": \"HY_Basin\",\n  \"properties\": {\n    \"gnis_url\": \"https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133\",\n    \"uri\": \"https://geoconnex.us/ref/hu02/03\",\n    \"gnis_id\": 2730133,\n    \"name\": \"South Atlantic-Gulf Region\",\n    \"fid\": 15,\n    \"loaddate\": \"2018-07-17T15:44:28+00:00\",\n    \"prev\": \"02\",\n    \"next\": \"04\"\n  },\n  \"id\": \"03\",\n  \"geometry\": {\n    \"type\": \"MultiPolygon\",\n    \"coordinates\": [\n      [\n        [\n          -82.79192551924065,\n          24.699718894664848\n        ],\n        [\n          -82.75341358941488,\n          24.668448982060728\n        ],\n        [\n          -82.75066457497482,\n          24.65974178394976\n        ],\n        [\n          -82.79192551924065,\n          24.699718894664848\n        ]\n      ]\n    ]\n\n  },\n  \"links\": [\n\n    {\n      \"rel\": \"alternate\",\n      \"type\": \"text/html\",\n      \"title\": \"This document as HTML\",\n      \"href\": \"https://geoconnex.us/ref/hu02/03?f=html\"\n    },\n    {\n      \"rel\": \"collection\",\n      \"type\": \"application/json\",\n      \"title\": \"HU02\",\n      \"href\": \"https://reference.geoconnex.us/collections/hu02\"\n    },\n    {\n      \"rel\": \"prev\",\n      \"type\": \"application/json\",\n      \"href\": \"https://reference.geoconnex.us/collections/hu02/items/02?f=json\"\n    }\n  ]\n}\n",
+          "url": "https://ogcincubator.github.io/bblocks-hydro/build/tests/hydro/hyf/classes/hy_catchment/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"type\": \"Feature\",\n  \"featureType\": \"HY_Basin\",\n  \"properties\": {\n    \"gnis_url\": \"https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133\",\n    \"uri\": \"https://geoconnex.us/ref/hu02/03\",\n    \"gnis_id\": 2730133,\n    \"name\": \"South Atlantic-Gulf Region\",\n    \"fid\": 15,\n    \"loaddate\": \"2018-07-17T15:44:28+00:00\",\n    \"prev\": \"02\",\n    \"next\": \"04\"\n  },\n  \"id\": \"03\",\n  \"geometry\": {\n    \"type\": \"MultiPolygon\",\n    \"coordinates\": [\n      [\n        [\n          -82.79192551924065,\n          24.699718894664848\n        ],\n        [\n          -82.75341358941488,\n          24.668448982060728\n        ],\n        [\n          -82.75066457497482,\n          24.65974178394976\n        ],\n        [\n          -82.79192551924065,\n          24.699718894664848\n        ]\n      ]\n    ]\n  },\n  \"links\": [\n    {\n      \"rel\": \"alternate\",\n      \"type\": \"text/html\",\n      \"title\": \"This document as HTML\",\n      \"href\": \"https://geoconnex.us/ref/hu02/03?f=html\"\n    },\n    {\n      \"rel\": \"collection\",\n      \"type\": \"application/json\",\n      \"title\": \"HU02\",\n      \"href\": \"https://reference.geoconnex.us/collections/hu02\"\n    },\n    {\n      \"rel\": \"prev\",\n      \"type\": \"application/json\",\n      \"href\": \"https://reference.geoconnex.us/collections/hu02/items/02?f=json\"\n    }\n  ],\n  \"@context\": \"https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/context.jsonld\"\n}",
+          "url": "https://ogcincubator.github.io/bblocks-hydro/build/tests/hydro/hyf/classes/hy_catchment/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix dcterms: <http://purl.org/dc/terms/> .\n@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix hyf: <https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/> .\n@prefix ns1: <http://www.iana.org/assignments/> .\n@prefix oa: <http://www.w3.org/ns/oa#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<http://example.com/features/03> a geojson:Feature ;\n    rdfs:seeAlso [ rdfs:label \"This document as HTML\" ;\n            dcterms:type \"text/html\" ;\n            ns1:relation <http://www.iana.org/assignments/relation/alternate> ;\n            oa:hasTarget <https://geoconnex.us/ref/hu02/03?f=html> ],\n        [ dcterms:type \"application/json\" ;\n            ns1:relation <http://www.iana.org/assignments/relation/prev> ;\n            oa:hasTarget <https://reference.geoconnex.us/collections/hu02/items/02?f=json> ],\n        [ rdfs:label \"HU02\" ;\n            dcterms:type \"application/json\" ;\n            ns1:relation <http://www.iana.org/assignments/relation/collection> ;\n            oa:hasTarget <https://reference.geoconnex.us/collections/hu02> ] ;\n    geojson:geometry [ a geojson:MultiPolygon ;\n            geojson:coordinates ( ( ( -8.279193e+01 2.469972e+01 ) ( -8.275341e+01 2.466845e+01 ) ( -8.275066e+01 2.465974e+01 ) ( -8.279193e+01 2.469972e+01 ) ) ) ] ;\n    hyf:upstreamBasin <http://example.com/features/02> .\n\n",
+          "url": "https://ogcincubator.github.io/bblocks-hydro/build/tests/hydro/hyf/classes/hy_catchment/example_1_1.ttl"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: HY_Basin Feature\nallOf:\n- $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema.yaml#/$defs/HY_Basin\n- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml\nx-jsonld-extra-terms:\n  prev:\n    x-jsonld-type: '@id'\n    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin\n  upstreamBasin:\n    x-jsonld-type: '@id'\n    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin\n  hyf:upstreamBasin:\n    x-jsonld-type: '@id'\n    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin\nx-jsonld-prefixes:\n  hyf: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-hydro",
+  "gitPath": "_sources/classes/hy_catchment"
+}

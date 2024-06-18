@@ -1,12 +1,45 @@
 {
-  "$schema": "https://json-schema.org/draft/2019-09/schema",
-  "$id": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature.json",
+  "x-defs": {
+    "Point": {
+      "title": "GeoJSON Point",
+      "type": "object",
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Point"
+          ]
+        },
+        "coordinates": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "number"
+          }
+        },
+        "bbox": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "number"
+          }
+        }
+      },
+      "x-schema-source": "https://geojson.org/schema/Point.json",
+      "x-schema-id": "https://geojson.org/schema/Point.json",
+      "x-schema-version": "http://json-schema.org/draft-07/schema#"
+    }
+  },
   "$defs": {
     "HY_Basin": {
       "$anchor": "HY_Basin",
       "allOf": [
         {
-          "$ref": "#/$defs/HY_Catchment"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.json#/$defs/HY_Catchment"
         },
         {
           "type": "object",
@@ -20,9 +53,7 @@
                     "type": "string",
                     "format": "uri"
                   },
-                  "uniqueItems": true,
-                  "x-jsonld-type": "@id",
-                  "x-jsonld-id": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin"
+                  "uniqueItems": true
                 },
                 "code": {
                   "type": "string"
@@ -51,7 +82,7 @@
       "$anchor": "HY_BasinAggregate",
       "allOf": [
         {
-          "$ref": "#/$defs/HY_Catchment"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.json#/$defs/HY_Catchment"
         },
         {
           "type": "object",
@@ -84,7 +115,7 @@
       "$anchor": "HY_Catchment",
       "allOf": [
         {
-          "$ref": "#/$defs/HY_HydroFeature"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.json#/$defs/HY_HydroFeature"
         },
         {
           "type": "object",
@@ -106,7 +137,7 @@
       "$anchor": "HY_CatchmentArea",
       "allOf": [
         {
-          "$ref": "#/$defs/HY_CatchmentRepresentation"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.json#/$defs/HY_CatchmentRepresentation"
         },
         {
           "type": "object"
@@ -117,7 +148,7 @@
       "$anchor": "HY_CatchmentBoundary",
       "allOf": [
         {
-          "$ref": "#/$defs/HY_CatchmentRepresentation"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.json#/$defs/HY_CatchmentRepresentation"
         },
         {
           "type": "object"
@@ -219,7 +250,7 @@
       "$anchor": "HY_FlowPath",
       "allOf": [
         {
-          "$ref": "#/$defs/HY_CatchmentRepresentation"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.json#/$defs/HY_CatchmentRepresentation"
         },
         {
           "type": "object"
@@ -230,7 +261,7 @@
       "$anchor": "HY_Glacier",
       "allOf": [
         {
-          "$ref": "#/$defs/HY_HydroFeature"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.json#/$defs/HY_HydroFeature"
         },
         {
           "type": "object"
@@ -257,14 +288,14 @@
             "name": {
               "type": "array",
               "items": {
-                "$ref": "#/$defs/HY_HydroFeatureName"
+                "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.json#/$defs/HY_HydroFeatureName"
               },
               "uniqueItems": true
             },
             "context": {
               "type": "array",
               "items": {
-                "$ref": "#/$defs/HY_HydroFeatureContext"
+                "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.json#/$defs/HY_HydroFeatureContext"
               },
               "uniqueItems": true
             }
@@ -323,7 +354,7 @@
       "$anchor": "HY_HydrographicNetwork",
       "allOf": [
         {
-          "$ref": "#/$defs/HY_Network"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.json#/$defs/HY_Network"
         },
         {
           "type": "object"
@@ -427,7 +458,7 @@
       "$anchor": "HY_Network",
       "allOf": [
         {
-          "$ref": "#/$defs/HY_CatchmentRepresentation"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.json#/$defs/HY_CatchmentRepresentation"
         },
         {
           "type": "object"
@@ -487,7 +518,7 @@
       "type": "object",
       "properties": {
         "geometry": {
-          "$ref": "https://geojson.org/schema/Point.json"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.json#/x-defs/Point"
         },
         "properties": {
           "type": "object",
@@ -496,7 +527,7 @@
               "type": "string"
             },
             "refPointType": {
-              "$ref": "#/$defs/HY_RefPointType"
+              "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.json#/$defs/HY_RefPointType"
             },
             "networkLocation": {
               "type": "string",
@@ -523,7 +554,7 @@
               "type": "string"
             },
             "description": {
-              "$ref": "#/$defs/HY_RelativePositionDescription"
+              "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.json#/$defs/HY_RelativePositionDescription"
             },
             "percentage": {
               "type": "number"
@@ -547,7 +578,7 @@
       "$anchor": "HY_Reservoir",
       "allOf": [
         {
-          "$ref": "#/$defs/HY_HydroFeature"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.json#/$defs/HY_HydroFeature"
         },
         {
           "type": "object"
@@ -588,7 +619,7 @@
       "$anchor": "HY_WaterBody",
       "allOf": [
         {
-          "$ref": "#/$defs/HY_HydroFeature"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.json#/$defs/HY_HydroFeature"
         },
         {
           "type": "object",
@@ -616,7 +647,7 @@
       "$anchor": "HY_WaterBodySegment",
       "allOf": [
         {
-          "$ref": "#/$defs/HY_HydroFeature"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.json#/$defs/HY_HydroFeature"
         },
         {
           "type": "object",
@@ -792,7 +823,7 @@
       "$anchor": "HY_Watershed",
       "allOf": [
         {
-          "$ref": "#/$defs/HY_CatchmentBoundary"
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.json#/$defs/HY_CatchmentBoundary"
         },
         {
           "type": "object",
@@ -811,17 +842,6 @@
       ]
     }
   },
-  "x-jsonld-extra-terms": {
-    "prev": {
-      "x-jsonld-type": "@id",
-      "x-jsonld-id": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin"
-    },
-    "hyf:upstreamBasin": {
-      "x-jsonld-type": "@id",
-      "x-jsonld-id": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin"
-    }
-  },
-  "x-jsonld-prefixes": {
-    "hyf": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/"
-  }
+  "x-schema-id": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature.json",
+  "x-schema-version": "https://json-schema.org/draft/2019-09/schema"
 }

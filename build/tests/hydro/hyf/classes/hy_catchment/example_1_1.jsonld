@@ -54,5 +54,5 @@
       "href": "https://reference.geoconnex.us/collections/hu02/items/02?f=json"
     }
   ],
-  "@context": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/context.jsonld"
+  "@context": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/context.jsonld"
 }

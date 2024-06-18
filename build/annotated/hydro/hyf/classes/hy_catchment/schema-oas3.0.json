@@ -1,0 +1,1570 @@
+{
+  "x-defs": {
+    "ogc.hydro.hyf.model": {
+      "$defs": {
+        "HY_Basin": {
+          "$anchor": "HY_Basin",
+          "allOf": [
+            {
+              "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.hydro.hyf.model/$defs/HY_Catchment"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "properties": {
+                  "type": "object",
+                  "properties": {
+                    "upstreamBasin": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      "uniqueItems": true
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "inflowNode": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "outflowNode": {
+                      "type": "string",
+                      "format": "uri"
+                    }
+                  },
+                  "required": [
+                    "outflowNode"
+                  ]
+                }
+              },
+              "required": [
+                "properties"
+              ]
+            }
+          ]
+        },
+        "HY_BasinAggregate": {
+          "$anchor": "HY_BasinAggregate",
+          "allOf": [
+            {
+              "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.hydro.hyf.model/$defs/HY_Catchment"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "properties": {
+                  "type": "object",
+                  "properties": {
+                    "subBasin": {
+                      "type": "array",
+                      "minItems": 1,
+                      "items": {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      "uniqueItems": true
+                    }
+                  },
+                  "required": [
+                    "subBasin"
+                  ]
+                }
+              },
+              "required": [
+                "properties"
+              ]
+            }
+          ]
+        },
+        "HY_Catchment": {
+          "$anchor": "HY_Catchment",
+          "allOf": [
+            {
+              "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.hydro.hyf.model/$defs/HY_HydroFeature"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "properties": {
+                  "type": "object",
+                  "properties": {
+                    "containingCatchment": {
+                      "type": "string",
+                      "format": "uri"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "HY_CatchmentArea": {
+          "$anchor": "HY_CatchmentArea",
+          "allOf": [
+            {
+              "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.hydro.hyf.model/$defs/HY_CatchmentRepresentation"
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "HY_CatchmentBoundary": {
+          "$anchor": "HY_CatchmentBoundary",
+          "allOf": [
+            {
+              "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.hydro.hyf.model/$defs/HY_CatchmentRepresentation"
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "HY_CatchmentRepresentation": {
+          "$anchor": "HY_CatchmentRepresentation",
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "@type": {
+                  "type": "string"
+                },
+                "representedCatchment": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "@type",
+                "representedCatchment"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        },
+        "HY_CrossSection": {
+          "$anchor": "HY_CrossSection",
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "@type": {
+                  "type": "string"
+                },
+                "upstreamCrossSection": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                },
+                "crossSectionPoint": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "@type"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        },
+        "HY_DistanceToRefPoint": {
+          "$anchor": "HY_DistanceToRefPoint",
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "@type": {
+                  "type": "string"
+                },
+                "distanceValue": {
+                  "type": "number"
+                },
+                "accuracyStatement": {
+                  "type": "number"
+                },
+                "precisionStatement": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "@type",
+                "distanceValue"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        },
+        "HY_FlowPath": {
+          "$anchor": "HY_FlowPath",
+          "allOf": [
+            {
+              "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.hydro.hyf.model/$defs/HY_CatchmentRepresentation"
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "HY_Glacier": {
+          "$anchor": "HY_Glacier",
+          "allOf": [
+            {
+              "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.hydro.hyf.model/$defs/HY_HydroFeature"
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "HY_HydroFeature": {
+          "$anchor": "HY_HydroFeature",
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "@type": {
+                  "type": "string"
+                },
+                "identifier": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "uniqueItems": true
+                },
+                "name": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.hydro.hyf.model/$defs/HY_HydroFeatureName"
+                  },
+                  "uniqueItems": true
+                },
+                "context": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.hydro.hyf.model/$defs/HY_HydroFeatureContext"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "@type"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        },
+        "HY_HydroFeatureContext": {
+          "$anchor": "HY_HydroFeatureContext",
+          "type": "object",
+          "properties": {
+            "@type": {
+              "type": "string"
+            },
+            "hydroFeature": {
+              "type": "string",
+              "format": "uri"
+            },
+            "classification": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            },
+            "spatialContext": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            },
+            "temporalContext": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            }
+          },
+          "required": [
+            "@type"
+          ]
+        },
+        "HY_HydroFeatureName": {
+          "$anchor": "HY_HydroFeatureName",
+          "type": "string"
+        },
+        "HY_HydrographicNetwork": {
+          "$anchor": "HY_HydrographicNetwork",
+          "allOf": [
+            {
+              "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.hydro.hyf.model/$defs/HY_Network"
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "HY_IndirectPosition": {
+          "$anchor": "HY_IndirectPosition",
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "@type": {
+                  "type": "string"
+                },
+                "distanceToRefPoint": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "relativePosition": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "referencePoint": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                },
+                "mileageCS": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "@type",
+                "referencePoint"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        },
+        "HY_LongitudinalSection": {
+          "$anchor": "HY_LongitudinalSection",
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "@type": {
+                  "type": "string"
+                },
+                "longitudinalSectionPoint": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "@type"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        },
+        "HY_MileageSystemAxis": {
+          "$anchor": "HY_MileageSystemAxis",
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "@type": {
+                  "type": "string"
+                },
+                "precision": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "@type"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        },
+        "HY_Network": {
+          "$anchor": "HY_Network",
+          "allOf": [
+            {
+              "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.hydro.hyf.model/$defs/HY_CatchmentRepresentation"
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "HY_Outfall": {
+          "$anchor": "HY_Outfall",
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "@type": {
+                  "type": "string"
+                },
+                "receivingBasin": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                },
+                "contributingBasin": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                },
+                "position": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "@type",
+                "contributingBasin",
+                "position"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        },
+        "HY_RefPointType": {
+          "$anchor": "HY_RefPointType",
+          "type": "string",
+          "format": "uri"
+        },
+        "HY_ReferencePoint": {
+          "$anchor": "HY_ReferencePoint",
+          "type": "object",
+          "properties": {
+            "geometry": {
+              "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/Point"
+            },
+            "properties": {
+              "type": "object",
+              "properties": {
+                "@type": {
+                  "type": "string"
+                },
+                "refPointType": {
+                  "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.hydro.hyf.model/$defs/HY_RefPointType"
+                },
+                "networkLocation": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "@type"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        },
+        "HY_RelativePosition": {
+          "$anchor": "HY_RelativePosition",
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "@type": {
+                  "type": "string"
+                },
+                "description": {
+                  "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.hydro.hyf.model/$defs/HY_RelativePositionDescription"
+                },
+                "percentage": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "@type"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        },
+        "HY_RelativePositionDescription": {
+          "$anchor": "HY_RelativePositionDescription",
+          "type": "string",
+          "format": "uri"
+        },
+        "HY_Reservoir": {
+          "$anchor": "HY_Reservoir",
+          "allOf": [
+            {
+              "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.hydro.hyf.model/$defs/HY_HydroFeature"
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "HY_RiverMileageCS": {
+          "$anchor": "HY_RiverMileageCS",
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "@type": {
+                  "type": "string"
+                },
+                "axis": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "@type",
+                "axis"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        },
+        "HY_WaterBody": {
+          "$anchor": "HY_WaterBody",
+          "allOf": [
+            {
+              "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.hydro.hyf.model/$defs/HY_HydroFeature"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "properties": {
+                  "type": "object",
+                  "properties": {
+                    "hydrographicNetwork": {
+                      "type": "string",
+                      "format": "uri"
+                    }
+                  },
+                  "required": [
+                    "hydrographicNetwork"
+                  ]
+                }
+              },
+              "required": [
+                "properties"
+              ]
+            }
+          ]
+        },
+        "HY_WaterBodySegment": {
+          "$anchor": "HY_WaterBodySegment",
+          "allOf": [
+            {
+              "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.hydro.hyf.model/$defs/HY_HydroFeature"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "properties": {
+                  "type": "object",
+                  "properties": {
+                    "streamCrossSection": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      "uniqueItems": true
+                    },
+                    "streamLongitudinalSection": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      "uniqueItems": true
+                    },
+                    "upstreamSegment": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      "uniqueItems": true
+                    },
+                    "downstreamSegment": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      "uniqueItems": true
+                    },
+                    "waterBody": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "fixedLandmark": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "format": "uri"
+                      },
+                      "uniqueItems": true
+                    }
+                  },
+                  "required": [
+                    "waterBody"
+                  ]
+                }
+              },
+              "required": [
+                "properties"
+              ]
+            }
+          ]
+        },
+        "HY_WaterBodyStratum": {
+          "$anchor": "HY_WaterBodyStratum",
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "@type": {
+                  "type": "string"
+                },
+                "stratumType": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "uniqueItems": true
+                },
+                "segment": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "storage": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "@type",
+                "segment"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        },
+        "HY_Water_LiquidPhase": {
+          "$anchor": "HY_Water_LiquidPhase",
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "@type": {
+                  "type": "string"
+                },
+                "accumulatingWaterBody": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "@type"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        },
+        "HY_Water_SolidPhase": {
+          "$anchor": "HY_Water_SolidPhase",
+          "type": "object",
+          "properties": {
+            "properties": {
+              "type": "object",
+              "properties": {
+                "@type": {
+                  "type": "string"
+                },
+                "coveredWaterBody": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                },
+                "snowmelt": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "accumulatingGlacier": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "uniqueItems": true
+                }
+              },
+              "required": [
+                "@type"
+              ]
+            }
+          },
+          "required": [
+            "properties"
+          ]
+        },
+        "HY_Watershed": {
+          "$anchor": "HY_Watershed",
+          "allOf": [
+            {
+              "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.hydro.hyf.model/$defs/HY_CatchmentBoundary"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "properties": {
+                  "type": "object",
+                  "properties": {
+                    "outfall": {
+                      "type": "string",
+                      "format": "uri"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "x-schema-source": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema.json",
+      "x-schema-id": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature.json",
+      "x-schema-version": "https://json-schema.org/draft/2019-09/schema"
+    },
+    "ogc.geo.features.feature": {
+      "allOf": [
+        {
+          "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.geo.common.data_types.geojson"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "bbox": {
+              "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.geo.common.data_types.bounding_box"
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.ogc-utils.json-link"
+              },
+              "x-jsonld-id": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+            },
+            "type": {
+              "enum": [
+                "Feature"
+              ]
+            }
+          },
+          "required": [
+            "type",
+            "geometry",
+            "properties"
+          ]
+        }
+      ],
+      "x-jsonld-extra-terms": {
+        "properties": "@nest"
+      },
+      "x-jsonld-prefixes": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+      },
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.json"
+    },
+    "Point": {
+      "title": "GeoJSON Point",
+      "type": "object",
+      "required": [
+        "type",
+        "coordinates"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Point"
+          ]
+        },
+        "coordinates": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "number"
+          }
+        },
+        "bbox": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "number"
+          }
+        }
+      },
+      "x-schema-source": "https://geojson.org/schema/Point.json",
+      "x-schema-id": "https://geojson.org/schema/Point.json",
+      "x-schema-version": "http://json-schema.org/draft-07/schema#"
+    },
+    "ogc.geo.common.data_types.geojson": {
+      "title": "GeoJSON Feature",
+      "type": "object",
+      "required": [
+        "type",
+        "properties",
+        "geometry"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Feature"
+          ],
+          "x-jsonld-id": "@type"
+        },
+        "id": {
+          "oneOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            }
+          ],
+          "x-jsonld-id": "@id"
+        },
+        "properties": {
+          "oneOf": [
+            {
+              "type": "object"
+            }
+          ],
+          "x-jsonld-id": "@nest",
+          "nullable": true
+        },
+        "geometry": {
+          "oneOf": [
+            {
+              "title": "GeoJSON Point",
+              "type": "object",
+              "required": [
+                "type",
+                "coordinates"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "Point"
+                  ],
+                  "x-jsonld-id": "@type"
+                },
+                "coordinates": {
+                  "type": "array",
+                  "minItems": 2,
+                  "items": {
+                    "type": "number"
+                  },
+                  "x-jsonld-container": "@list",
+                  "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
+                },
+                "bbox": {
+                  "type": "array",
+                  "minItems": 4,
+                  "items": {
+                    "type": "number"
+                  },
+                  "x-jsonld-container": "@list",
+                  "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
+                }
+              }
+            },
+            {
+              "title": "GeoJSON LineString",
+              "type": "object",
+              "required": [
+                "type",
+                "coordinates"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "LineString"
+                  ],
+                  "x-jsonld-id": "@type"
+                },
+                "coordinates": {
+                  "type": "array",
+                  "minItems": 2,
+                  "items": {
+                    "type": "array",
+                    "minItems": 2,
+                    "items": {
+                      "type": "number"
+                    }
+                  },
+                  "x-jsonld-container": "@list",
+                  "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
+                },
+                "bbox": {
+                  "type": "array",
+                  "minItems": 4,
+                  "items": {
+                    "type": "number"
+                  },
+                  "x-jsonld-container": "@list",
+                  "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
+                }
+              }
+            },
+            {
+              "title": "GeoJSON Polygon",
+              "type": "object",
+              "required": [
+                "type",
+                "coordinates"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "Polygon"
+                  ],
+                  "x-jsonld-id": "@type"
+                },
+                "coordinates": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "minItems": 4,
+                    "items": {
+                      "type": "array",
+                      "minItems": 2,
+                      "items": {
+                        "type": "number"
+                      }
+                    }
+                  },
+                  "x-jsonld-container": "@list",
+                  "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
+                },
+                "bbox": {
+                  "type": "array",
+                  "minItems": 4,
+                  "items": {
+                    "type": "number"
+                  },
+                  "x-jsonld-container": "@list",
+                  "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
+                }
+              }
+            },
+            {
+              "title": "GeoJSON MultiPoint",
+              "type": "object",
+              "required": [
+                "type",
+                "coordinates"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "MultiPoint"
+                  ],
+                  "x-jsonld-id": "@type"
+                },
+                "coordinates": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "minItems": 2,
+                    "items": {
+                      "type": "number"
+                    }
+                  },
+                  "x-jsonld-container": "@list",
+                  "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
+                },
+                "bbox": {
+                  "type": "array",
+                  "minItems": 4,
+                  "items": {
+                    "type": "number"
+                  },
+                  "x-jsonld-container": "@list",
+                  "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
+                }
+              }
+            },
+            {
+              "title": "GeoJSON MultiLineString",
+              "type": "object",
+              "required": [
+                "type",
+                "coordinates"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "MultiLineString"
+                  ],
+                  "x-jsonld-id": "@type"
+                },
+                "coordinates": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "minItems": 2,
+                    "items": {
+                      "type": "array",
+                      "minItems": 2,
+                      "items": {
+                        "type": "number"
+                      }
+                    }
+                  },
+                  "x-jsonld-container": "@list",
+                  "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
+                },
+                "bbox": {
+                  "type": "array",
+                  "minItems": 4,
+                  "items": {
+                    "type": "number"
+                  },
+                  "x-jsonld-container": "@list",
+                  "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
+                }
+              }
+            },
+            {
+              "title": "GeoJSON MultiPolygon",
+              "type": "object",
+              "required": [
+                "type",
+                "coordinates"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "MultiPolygon"
+                  ],
+                  "x-jsonld-id": "@type"
+                },
+                "coordinates": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "array",
+                      "minItems": 4,
+                      "items": {
+                        "type": "array",
+                        "minItems": 2,
+                        "items": {
+                          "type": "number"
+                        }
+                      }
+                    }
+                  },
+                  "x-jsonld-container": "@list",
+                  "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
+                },
+                "bbox": {
+                  "type": "array",
+                  "minItems": 4,
+                  "items": {
+                    "type": "number"
+                  },
+                  "x-jsonld-container": "@list",
+                  "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
+                }
+              }
+            },
+            {
+              "title": "GeoJSON GeometryCollection",
+              "type": "object",
+              "required": [
+                "type",
+                "geometries"
+              ],
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "GeometryCollection"
+                  ],
+                  "x-jsonld-id": "@type"
+                },
+                "geometries": {
+                  "type": "array",
+                  "items": {
+                    "oneOf": [
+                      {
+                        "title": "GeoJSON Point",
+                        "type": "object",
+                        "required": [
+                          "type",
+                          "coordinates"
+                        ],
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "enum": [
+                              "Point"
+                            ],
+                            "x-jsonld-id": "@type"
+                          },
+                          "coordinates": {
+                            "type": "array",
+                            "minItems": 2,
+                            "items": {
+                              "type": "number"
+                            },
+                            "x-jsonld-container": "@list",
+                            "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
+                          },
+                          "bbox": {
+                            "type": "array",
+                            "minItems": 4,
+                            "items": {
+                              "type": "number"
+                            },
+                            "x-jsonld-container": "@list",
+                            "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
+                          }
+                        }
+                      },
+                      {
+                        "title": "GeoJSON LineString",
+                        "type": "object",
+                        "required": [
+                          "type",
+                          "coordinates"
+                        ],
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "enum": [
+                              "LineString"
+                            ],
+                            "x-jsonld-id": "@type"
+                          },
+                          "coordinates": {
+                            "type": "array",
+                            "minItems": 2,
+                            "items": {
+                              "type": "array",
+                              "minItems": 2,
+                              "items": {
+                                "type": "number"
+                              }
+                            },
+                            "x-jsonld-container": "@list",
+                            "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
+                          },
+                          "bbox": {
+                            "type": "array",
+                            "minItems": 4,
+                            "items": {
+                              "type": "number"
+                            },
+                            "x-jsonld-container": "@list",
+                            "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
+                          }
+                        }
+                      },
+                      {
+                        "title": "GeoJSON Polygon",
+                        "type": "object",
+                        "required": [
+                          "type",
+                          "coordinates"
+                        ],
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "enum": [
+                              "Polygon"
+                            ],
+                            "x-jsonld-id": "@type"
+                          },
+                          "coordinates": {
+                            "type": "array",
+                            "items": {
+                              "type": "array",
+                              "minItems": 4,
+                              "items": {
+                                "type": "array",
+                                "minItems": 2,
+                                "items": {
+                                  "type": "number"
+                                }
+                              }
+                            },
+                            "x-jsonld-container": "@list",
+                            "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
+                          },
+                          "bbox": {
+                            "type": "array",
+                            "minItems": 4,
+                            "items": {
+                              "type": "number"
+                            },
+                            "x-jsonld-container": "@list",
+                            "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
+                          }
+                        }
+                      },
+                      {
+                        "title": "GeoJSON MultiPoint",
+                        "type": "object",
+                        "required": [
+                          "type",
+                          "coordinates"
+                        ],
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "enum": [
+                              "MultiPoint"
+                            ],
+                            "x-jsonld-id": "@type"
+                          },
+                          "coordinates": {
+                            "type": "array",
+                            "items": {
+                              "type": "array",
+                              "minItems": 2,
+                              "items": {
+                                "type": "number"
+                              }
+                            },
+                            "x-jsonld-container": "@list",
+                            "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
+                          },
+                          "bbox": {
+                            "type": "array",
+                            "minItems": 4,
+                            "items": {
+                              "type": "number"
+                            },
+                            "x-jsonld-container": "@list",
+                            "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
+                          }
+                        }
+                      },
+                      {
+                        "title": "GeoJSON MultiLineString",
+                        "type": "object",
+                        "required": [
+                          "type",
+                          "coordinates"
+                        ],
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "enum": [
+                              "MultiLineString"
+                            ],
+                            "x-jsonld-id": "@type"
+                          },
+                          "coordinates": {
+                            "type": "array",
+                            "items": {
+                              "type": "array",
+                              "minItems": 2,
+                              "items": {
+                                "type": "array",
+                                "minItems": 2,
+                                "items": {
+                                  "type": "number"
+                                }
+                              }
+                            },
+                            "x-jsonld-container": "@list",
+                            "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
+                          },
+                          "bbox": {
+                            "type": "array",
+                            "minItems": 4,
+                            "items": {
+                              "type": "number"
+                            },
+                            "x-jsonld-container": "@list",
+                            "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
+                          }
+                        }
+                      },
+                      {
+                        "title": "GeoJSON MultiPolygon",
+                        "type": "object",
+                        "required": [
+                          "type",
+                          "coordinates"
+                        ],
+                        "properties": {
+                          "type": {
+                            "type": "string",
+                            "enum": [
+                              "MultiPolygon"
+                            ],
+                            "x-jsonld-id": "@type"
+                          },
+                          "coordinates": {
+                            "type": "array",
+                            "items": {
+                              "type": "array",
+                              "items": {
+                                "type": "array",
+                                "minItems": 4,
+                                "items": {
+                                  "type": "array",
+                                  "minItems": 2,
+                                  "items": {
+                                    "type": "number"
+                                  }
+                                }
+                              }
+                            },
+                            "x-jsonld-container": "@list",
+                            "x-jsonld-id": "https://purl.org/geojson/vocab#coordinates"
+                          },
+                          "bbox": {
+                            "type": "array",
+                            "minItems": 4,
+                            "items": {
+                              "type": "number"
+                            },
+                            "x-jsonld-container": "@list",
+                            "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                "bbox": {
+                  "type": "array",
+                  "minItems": 4,
+                  "items": {
+                    "type": "number"
+                  },
+                  "x-jsonld-container": "@list",
+                  "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
+                }
+              }
+            }
+          ],
+          "x-jsonld-id": "https://purl.org/geojson/vocab#geometry",
+          "nullable": true
+        },
+        "bbox": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "number"
+          },
+          "x-jsonld-container": "@list",
+          "x-jsonld-id": "https://purl.org/geojson/vocab#bbox"
+        }
+      },
+      "x-jsonld-extra-terms": {
+        "Feature": "https://purl.org/geojson/vocab#Feature",
+        "FeatureCollection": "https://purl.org/geojson/vocab#FeatureCollection",
+        "GeometryCollection": "https://purl.org/geojson/vocab#GeometryCollection",
+        "LineString": "https://purl.org/geojson/vocab#LineString",
+        "MultiLineString": "https://purl.org/geojson/vocab#MultiLineString",
+        "MultiPoint": "https://purl.org/geojson/vocab#MultiPoint",
+        "MultiPolygon": "https://purl.org/geojson/vocab#MultiPolygon",
+        "Point": "https://purl.org/geojson/vocab#Point",
+        "Polygon": "https://purl.org/geojson/vocab#Polygon",
+        "features": {
+          "x-jsonld-container": "@set",
+          "x-jsonld-id": "https://purl.org/geojson/vocab#features"
+        }
+      },
+      "x-jsonld-prefixes": {
+        "geojson": "https://purl.org/geojson/vocab#"
+      },
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.json",
+      "x-schema-id": "https://geojson.org/schema/Feature.json",
+      "x-schema-version": "http://json-schema.org/draft-07/schema#"
+    },
+    "ogc.geo.common.data_types.bounding_box": {
+      "type": "array",
+      "oneOf": [
+        {
+          "minItems": 4,
+          "maxItems": 4
+        },
+        {
+          "minItems": 6,
+          "maxItems": 6
+        }
+      ],
+      "items": {
+        "type": "number"
+      },
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/bounding_box/schema.json"
+    },
+    "ogc.ogc-utils.json-link": {
+      "description": "JSON Link",
+      "type": "object",
+      "required": [
+        "href",
+        "rel"
+      ],
+      "properties": {
+        "href": {
+          "type": "string",
+          "format": "uri-reference",
+          "x-jsonld-type": "@id",
+          "x-jsonld-id": "http://www.w3.org/ns/oa#hasTarget"
+        },
+        "rel": {
+          "type": "string",
+          "x-jsonld-id": "http://www.iana.org/assignments/relation",
+          "x-jsonld-type": "@id",
+          "x-jsonld-base": "http://www.iana.org/assignments/relation/"
+        },
+        "anchor": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "x-jsonld-id": "http://purl.org/dc/terms/type"
+        },
+        "hreflang": {
+          "type": "string",
+          "x-jsonld-id": "http://purl.org/dc/terms/language"
+        },
+        "title": {
+          "type": "string",
+          "x-jsonld-id": "http://www.w3.org/2000/01/rdf-schema#label"
+        },
+        "length": {
+          "type": "integer",
+          "x-jsonld-id": "http://purl.org/dc/terms/extent"
+        }
+      },
+      "x-jsonld-prefixes": {
+        "oa": "http://www.w3.org/ns/oa#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "dct": "http://purl.org/dc/terms/"
+      },
+      "x-schema-source": "https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.json",
+      "x-schema-version": "https://json-schema.org/draft/2020-12/schema"
+    }
+  },
+  "description": "HY_Basin Feature",
+  "allOf": [
+    {
+      "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.hydro.hyf.model/$defs/HY_Basin"
+    },
+    {
+      "$ref": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/classes/hy_catchment/schema-oas3.0.json#/x-defs/ogc.geo.features.feature"
+    }
+  ],
+  "x-jsonld-extra-terms": {
+    "prev": {
+      "x-jsonld-type": "@id",
+      "x-jsonld-id": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin"
+    },
+    "upstreamBasin": {
+      "x-jsonld-type": "@id",
+      "x-jsonld-id": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin"
+    },
+    "hyf:upstreamBasin": {
+      "x-jsonld-type": "@id",
+      "x-jsonld-id": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin"
+    }
+  },
+  "x-jsonld-prefixes": {
+    "hyf": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/"
+  },
+  "x-schema-version": "https://json-schema.org/draft/2020-12/schema"
+}

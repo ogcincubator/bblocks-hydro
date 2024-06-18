@@ -1,169 +1,33 @@
-
-# HY_Basin (Schema)
-
-`ogc.hydro.hy_catchment` *v1.0*
-
-HY Feature example - HY_Basin
-
-[*Status*](http://www.opengis.net/def/status): Under development
-
-## Description
-
-## HY_Basin
-
- A Building Block for a typical Class - HY_Basin
-
-The schema is derived directly from the UML model, and it linked to an ontology also derived from the UML model.
-
-The model schema is wrapped in a FG-JSON feature schema.
-
-
-
-## Examples
-
-### GeoJSON - specialisation example.
-#### json
-```json
-{
-  "type": "Feature",
-  "featureType": "HY_Basin",
-  "properties": {
-    "gnis_url": "https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133",
-    "uri": "https://geoconnex.us/ref/hu02/03",
-    "gnis_id": 2730133,
-    "name": "South Atlantic-Gulf Region",
-    "fid": 15,
-    "loaddate": "2018-07-17T15:44:28+00:00",
-    "prev": "02",
-    "next": "04"
-  },
-  "id": "03",
-  "geometry": {
-    "type": "MultiPolygon",
-    "coordinates": [
-      [
-        [
-          -82.79192551924065,
-          24.699718894664848
-        ],
-        [
-          -82.75341358941488,
-          24.668448982060728
-        ],
-        [
-          -82.75066457497482,
-          24.65974178394976
-        ],
-        [
-          -82.79192551924065,
-          24.699718894664848
-        ]
-      ]
-    ]
-
-  },
-  "links": [
-
-    {
-      "rel": "alternate",
-      "type": "text/html",
-      "title": "This document as HTML",
-      "href": "https://geoconnex.us/ref/hu02/03?f=html"
-    },
-    {
-      "rel": "collection",
-      "type": "application/json",
-      "title": "HU02",
-      "href": "https://reference.geoconnex.us/collections/hu02"
-    },
-    {
-      "rel": "prev",
-      "type": "application/json",
-      "href": "https://reference.geoconnex.us/collections/hu02/items/02?f=json"
-    }
-  ]
-}
-
-```
-
-#### jsonld
-```jsonld
-{
-  "type": "Feature",
-  "featureType": "HY_Basin",
-  "properties": {
-    "gnis_url": "https://geonames.usgs.gov/apex/f?p=gnispq:3:::NO::P3_FID:2730133",
-    "uri": "https://geoconnex.us/ref/hu02/03",
-    "gnis_id": 2730133,
-    "name": "South Atlantic-Gulf Region",
-    "fid": 15,
-    "loaddate": "2018-07-17T15:44:28+00:00",
-    "prev": "02",
-    "next": "04"
-  },
-  "id": "03",
-  "geometry": {
-    "type": "MultiPolygon",
-    "coordinates": [
-      [
-        [
-          -82.79192551924065,
-          24.699718894664848
-        ],
-        [
-          -82.75341358941488,
-          24.668448982060728
-        ],
-        [
-          -82.75066457497482,
-          24.65974178394976
-        ],
-        [
-          -82.79192551924065,
-          24.699718894664848
-        ]
-      ]
-    ]
-  },
-  "links": [
-    {
-      "rel": "alternate",
-      "type": "text/html",
-      "title": "This document as HTML",
-      "href": "https://geoconnex.us/ref/hu02/03?f=html"
-    },
-    {
-      "rel": "collection",
-      "type": "application/json",
-      "title": "HU02",
-      "href": "https://reference.geoconnex.us/collections/hu02"
-    },
-    {
-      "rel": "prev",
-      "type": "application/json",
-      "href": "https://reference.geoconnex.us/collections/hu02/items/02?f=json"
-    }
-  ],
-  "@context": "https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/context.jsonld"
-}
-```
-
-#### ttl
-```ttl
-
-
-```
-
-## Schema
-
-```yaml
-$schema: https://json-schema.org/draft/2019-09/schema
-$id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature.json
+x-defs:
+  Point:
+    title: GeoJSON Point
+    type: object
+    required:
+    - type
+    - coordinates
+    properties:
+      type:
+        type: string
+        enum:
+        - Point
+      coordinates:
+        type: array
+        minItems: 2
+        items:
+          type: number
+      bbox:
+        type: array
+        minItems: 4
+        items:
+          type: number
+    x-schema-source: https://geojson.org/schema/Point.json
+    x-schema-id: https://geojson.org/schema/Point.json
+    x-schema-version: http://json-schema.org/draft-07/schema#
 $defs:
   HY_Basin:
     $anchor: HY_Basin
     allOf:
-    - $ref: '#/$defs/HY_Catchment'
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.yaml#/$defs/HY_Catchment
     - type: object
       properties:
         properties:
@@ -175,8 +39,6 @@ $defs:
                 type: string
                 format: uri
               uniqueItems: true
-              x-jsonld-type: '@id'
-              x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin
             code:
               type: string
             inflowNode:
@@ -192,7 +54,7 @@ $defs:
   HY_BasinAggregate:
     $anchor: HY_BasinAggregate
     allOf:
-    - $ref: '#/$defs/HY_Catchment'
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.yaml#/$defs/HY_Catchment
     - type: object
       properties:
         properties:
@@ -212,7 +74,7 @@ $defs:
   HY_Catchment:
     $anchor: HY_Catchment
     allOf:
-    - $ref: '#/$defs/HY_HydroFeature'
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.yaml#/$defs/HY_HydroFeature
     - type: object
       properties:
         properties:
@@ -224,12 +86,12 @@ $defs:
   HY_CatchmentArea:
     $anchor: HY_CatchmentArea
     allOf:
-    - $ref: '#/$defs/HY_CatchmentRepresentation'
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.yaml#/$defs/HY_CatchmentRepresentation
     - type: object
   HY_CatchmentBoundary:
     $anchor: HY_CatchmentBoundary
     allOf:
-    - $ref: '#/$defs/HY_CatchmentRepresentation'
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.yaml#/$defs/HY_CatchmentRepresentation
     - type: object
   HY_CatchmentRepresentation:
     $anchor: HY_CatchmentRepresentation
@@ -296,12 +158,12 @@ $defs:
   HY_FlowPath:
     $anchor: HY_FlowPath
     allOf:
-    - $ref: '#/$defs/HY_CatchmentRepresentation'
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.yaml#/$defs/HY_CatchmentRepresentation
     - type: object
   HY_Glacier:
     $anchor: HY_Glacier
     allOf:
-    - $ref: '#/$defs/HY_HydroFeature'
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.yaml#/$defs/HY_HydroFeature
     - type: object
   HY_HydroFeature:
     $anchor: HY_HydroFeature
@@ -320,12 +182,12 @@ $defs:
           name:
             type: array
             items:
-              $ref: '#/$defs/HY_HydroFeatureName'
+              $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.yaml#/$defs/HY_HydroFeatureName
             uniqueItems: true
           context:
             type: array
             items:
-              $ref: '#/$defs/HY_HydroFeatureContext'
+              $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.yaml#/$defs/HY_HydroFeatureContext
             uniqueItems: true
         required:
         - '@type'
@@ -363,7 +225,7 @@ $defs:
   HY_HydrographicNetwork:
     $anchor: HY_HydrographicNetwork
     allOf:
-    - $ref: '#/$defs/HY_Network'
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.yaml#/$defs/HY_Network
     - type: object
   HY_IndirectPosition:
     $anchor: HY_IndirectPosition
@@ -432,7 +294,7 @@ $defs:
   HY_Network:
     $anchor: HY_Network
     allOf:
-    - $ref: '#/$defs/HY_CatchmentRepresentation'
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.yaml#/$defs/HY_CatchmentRepresentation
     - type: object
   HY_Outfall:
     $anchor: HY_Outfall
@@ -474,14 +336,14 @@ $defs:
     type: object
     properties:
       geometry:
-        $ref: https://geojson.org/schema/Point.json
+        $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.yaml#/x-defs/Point
       properties:
         type: object
         properties:
           '@type':
             type: string
           refPointType:
-            $ref: '#/$defs/HY_RefPointType'
+            $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.yaml#/$defs/HY_RefPointType
           networkLocation:
             type: string
             format: uri
@@ -499,7 +361,7 @@ $defs:
           '@type':
             type: string
           description:
-            $ref: '#/$defs/HY_RelativePositionDescription'
+            $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.yaml#/$defs/HY_RelativePositionDescription
           percentage:
             type: number
         required:
@@ -513,7 +375,7 @@ $defs:
   HY_Reservoir:
     $anchor: HY_Reservoir
     allOf:
-    - $ref: '#/$defs/HY_HydroFeature'
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.yaml#/$defs/HY_HydroFeature
     - type: object
   HY_RiverMileageCS:
     $anchor: HY_RiverMileageCS
@@ -539,7 +401,7 @@ $defs:
   HY_WaterBody:
     $anchor: HY_WaterBody
     allOf:
-    - $ref: '#/$defs/HY_HydroFeature'
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.yaml#/$defs/HY_HydroFeature
     - type: object
       properties:
         properties:
@@ -555,7 +417,7 @@ $defs:
   HY_WaterBodySegment:
     $anchor: HY_WaterBodySegment
     allOf:
-    - $ref: '#/$defs/HY_HydroFeature'
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.yaml#/$defs/HY_HydroFeature
     - type: object
       properties:
         properties:
@@ -676,7 +538,7 @@ $defs:
   HY_Watershed:
     $anchor: HY_Watershed
     allOf:
-    - $ref: '#/$defs/HY_CatchmentBoundary'
+    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema-oas3.0.yaml#/$defs/HY_CatchmentBoundary
     - type: object
       properties:
         properties:
@@ -685,54 +547,5 @@ $defs:
             outfall:
               type: string
               format: uri
-x-jsonld-extra-terms:
-  prev:
-    x-jsonld-type: '@id'
-    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin
-  hyf:upstreamBasin:
-    x-jsonld-type: '@id'
-    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin
-x-jsonld-prefixes:
-  hyf: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/
-
-```
-
-Links to the schema:
-
-* YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema.json)
-* JSON version: [schema.json](https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema.yaml)
-
-
-# JSON-LD Context
-
-```jsonld
-{
-  "@context": {
-    "prev": {
-      "@type": "@id",
-      "@id": "hyf:upstreamBasin"
-    },
-    "hyf:upstreamBasin": {
-      "@type": "@id",
-      "@id": "hyf:upstreamBasin"
-    },
-    "hyf": "https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/",
-    "@version": 1.1
-  }
-}
-```
-
-You can find the full JSON-LD context here:
-[context.jsonld](https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/context.jsonld)
-
-## Sources
-
-* [OGC API - Features, Part 1, 7.16.2: Feature Response](https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7)
-
-# For developers
-
-The source code for this Building Block can be found in the following repository:
-
-* URL: [https://github.com/ogcincubator/bblocks-hydro](https://github.com/ogcincubator/bblocks-hydro)
-* Path: `_sources/hy_catchment`
-
+x-schema-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature.json
+x-schema-version: https://json-schema.org/draft/2019-09/schema

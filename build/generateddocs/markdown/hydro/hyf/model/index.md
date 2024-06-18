@@ -1,33 +1,22 @@
-x-defs:
-  Point:
-    title: GeoJSON Point
-    type: object
-    required:
-    - type
-    - coordinates
-    properties:
-      type:
-        type: string
-        enum:
-        - Point
-      coordinates:
-        type: array
-        minItems: 2
-        items:
-          type: number
-      bbox:
-        type: array
-        minItems: 4
-        items:
-          type: number
-    x-schema-source: https://geojson.org/schema/Point.json
-    x-schema-id: https://geojson.org/schema/Point.json
-    x-schema-version: http://json-schema.org/draft-07/schema#
+
+# HY_HydroFeature (Schema)
+
+`ogc.hydro.hyf.model` *v1.0*
+
+HY Features Core model
+
+[*Status*](http://www.opengis.net/def/status): Under development
+
+## Schema
+
+```yaml
+$schema: https://json-schema.org/draft/2019-09/schema
+$id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature.json
 $defs:
   HY_Basin:
     $anchor: HY_Basin
     allOf:
-    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_Catchment
+    - $ref: '#/$defs/HY_Catchment'
     - type: object
       properties:
         properties:
@@ -39,8 +28,6 @@ $defs:
                 type: string
                 format: uri
               uniqueItems: true
-              x-jsonld-type: '@id'
-              x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin
             code:
               type: string
             inflowNode:
@@ -56,7 +43,7 @@ $defs:
   HY_BasinAggregate:
     $anchor: HY_BasinAggregate
     allOf:
-    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_Catchment
+    - $ref: '#/$defs/HY_Catchment'
     - type: object
       properties:
         properties:
@@ -76,7 +63,7 @@ $defs:
   HY_Catchment:
     $anchor: HY_Catchment
     allOf:
-    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_HydroFeature
+    - $ref: '#/$defs/HY_HydroFeature'
     - type: object
       properties:
         properties:
@@ -88,12 +75,12 @@ $defs:
   HY_CatchmentArea:
     $anchor: HY_CatchmentArea
     allOf:
-    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_CatchmentRepresentation
+    - $ref: '#/$defs/HY_CatchmentRepresentation'
     - type: object
   HY_CatchmentBoundary:
     $anchor: HY_CatchmentBoundary
     allOf:
-    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_CatchmentRepresentation
+    - $ref: '#/$defs/HY_CatchmentRepresentation'
     - type: object
   HY_CatchmentRepresentation:
     $anchor: HY_CatchmentRepresentation
@@ -160,12 +147,12 @@ $defs:
   HY_FlowPath:
     $anchor: HY_FlowPath
     allOf:
-    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_CatchmentRepresentation
+    - $ref: '#/$defs/HY_CatchmentRepresentation'
     - type: object
   HY_Glacier:
     $anchor: HY_Glacier
     allOf:
-    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_HydroFeature
+    - $ref: '#/$defs/HY_HydroFeature'
     - type: object
   HY_HydroFeature:
     $anchor: HY_HydroFeature
@@ -184,12 +171,12 @@ $defs:
           name:
             type: array
             items:
-              $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_HydroFeatureName
+              $ref: '#/$defs/HY_HydroFeatureName'
             uniqueItems: true
           context:
             type: array
             items:
-              $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_HydroFeatureContext
+              $ref: '#/$defs/HY_HydroFeatureContext'
             uniqueItems: true
         required:
         - '@type'
@@ -227,7 +214,7 @@ $defs:
   HY_HydrographicNetwork:
     $anchor: HY_HydrographicNetwork
     allOf:
-    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_Network
+    - $ref: '#/$defs/HY_Network'
     - type: object
   HY_IndirectPosition:
     $anchor: HY_IndirectPosition
@@ -296,7 +283,7 @@ $defs:
   HY_Network:
     $anchor: HY_Network
     allOf:
-    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_CatchmentRepresentation
+    - $ref: '#/$defs/HY_CatchmentRepresentation'
     - type: object
   HY_Outfall:
     $anchor: HY_Outfall
@@ -338,14 +325,14 @@ $defs:
     type: object
     properties:
       geometry:
-        $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/x-defs/Point
+        $ref: https://geojson.org/schema/Point.json
       properties:
         type: object
         properties:
           '@type':
             type: string
           refPointType:
-            $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_RefPointType
+            $ref: '#/$defs/HY_RefPointType'
           networkLocation:
             type: string
             format: uri
@@ -363,7 +350,7 @@ $defs:
           '@type':
             type: string
           description:
-            $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_RelativePositionDescription
+            $ref: '#/$defs/HY_RelativePositionDescription'
           percentage:
             type: number
         required:
@@ -377,7 +364,7 @@ $defs:
   HY_Reservoir:
     $anchor: HY_Reservoir
     allOf:
-    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_HydroFeature
+    - $ref: '#/$defs/HY_HydroFeature'
     - type: object
   HY_RiverMileageCS:
     $anchor: HY_RiverMileageCS
@@ -403,7 +390,7 @@ $defs:
   HY_WaterBody:
     $anchor: HY_WaterBody
     allOf:
-    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_HydroFeature
+    - $ref: '#/$defs/HY_HydroFeature'
     - type: object
       properties:
         properties:
@@ -419,7 +406,7 @@ $defs:
   HY_WaterBodySegment:
     $anchor: HY_WaterBodySegment
     allOf:
-    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_HydroFeature
+    - $ref: '#/$defs/HY_HydroFeature'
     - type: object
       properties:
         properties:
@@ -540,7 +527,7 @@ $defs:
   HY_Watershed:
     $anchor: HY_Watershed
     allOf:
-    - $ref: https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hy_catchment/schema-oas3.0.yaml#/$defs/HY_CatchmentBoundary
+    - $ref: '#/$defs/HY_CatchmentBoundary'
     - type: object
       properties:
         properties:
@@ -549,14 +536,22 @@ $defs:
             outfall:
               type: string
               format: uri
-x-jsonld-extra-terms:
-  prev:
-    x-jsonld-type: '@id'
-    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin
-  hyf:upstreamBasin:
-    x-jsonld-type: '@id'
-    x-jsonld-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/upstreamBasin
-x-jsonld-prefixes:
-  hyf: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature/hya/HY_HydroFeature/
-x-schema-id: https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroFeature.json
-x-schema-version: https://json-schema.org/draft/2019-09/schema
+
+```
+
+Links to the schema:
+
+* YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema.json)
+* JSON version: [schema.json](https://ogcincubator.github.io/bblocks-hydro/build/annotated/hydro/hyf/model/schema.yaml)
+
+## Sources
+
+* [OGC API - Features, Part 1, 7.16.2: Feature Response](https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7)
+
+# For developers
+
+The source code for this Building Block can be found in the following repository:
+
+* URL: [https://github.com/ogcincubator/bblocks-hydro](https://github.com/ogcincubator/bblocks-hydro)
+* Path: `_sources/model`
+
